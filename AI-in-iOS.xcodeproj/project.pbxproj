@@ -491,6 +491,7 @@
 			baseConfigurationReference = 491FA5CE6E81B7F9DFF04426 /* Pods-AI-in-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TX44MTV4A5;
 				INFOPLIST_FILE = "AI-in-iOS/Info.plist";
@@ -507,6 +508,7 @@
 			baseConfigurationReference = F77A30170845CF53958F5621 /* Pods-AI-in-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TX44MTV4A5;
 				INFOPLIST_FILE = "AI-in-iOS/Info.plist";
