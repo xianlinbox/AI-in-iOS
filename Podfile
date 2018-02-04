@@ -4,7 +4,7 @@ platform :ios, '9.0'
 target 'AI-in-iOS' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
+  pod 'SwiftLint'
   # Pods for AI-in-iOS
 
   target 'AI-in-iOSTests' do

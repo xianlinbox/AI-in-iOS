@@ -62,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32A23E08346748F1793F899C5FF672C1 /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SwiftLint;
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
 		637D0DE2C625A63E2C0862FE722424AC /* Pods-AI-in-iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +93,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				9758CC519AE2C57A9659FFC01AAD26F9 /* Pods */,
 				BB66D15B4C6C3E7BF0679DC971B6E48A /* Products */,
 				910F046D1D84827A7FF863D1F2F06FD0 /* Targets Support Files */,
 			);
@@ -97,6 +106,14 @@
 				DEC30CE2C009BCBC0A7E37BD98C504F5 /* Pods-AI-in-iOSTests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9758CC519AE2C57A9659FFC01AAD26F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32A23E08346748F1793F899C5FF672C1 /* SwiftLint */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BB66D15B4C6C3E7BF0679DC971B6E48A /* Products */ = {
