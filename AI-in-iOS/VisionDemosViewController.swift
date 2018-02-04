@@ -7,16 +7,20 @@
 //
 import UIKit
 
+let FACE_RECOG = "Face Recoginisation"
+let SPEC_RECOG = "Spec Recoginisation"
+let TEXT_RECOG = "Spec Recoginisation"
+let REALTIME_FACE_RECOG = "Realtime Face Recoginisation"
+let REALTIME_FACE_ADDON = "Realtime Face Add-on"
+
 class VisionDemosViewController: UITableViewController {
-    let demos:[String] = ["Vision Demos","NLP Demos"]
+    let demos:[String] = [FACE_RECOG, SPEC_RECOG, TEXT_RECOG, REALTIME_FACE_RECOG, REALTIME_FACE_ADDON]
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 

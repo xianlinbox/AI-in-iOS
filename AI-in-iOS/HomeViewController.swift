@@ -16,12 +16,10 @@ class HomeViewController: UITableViewController {
     let menu:[String] = [VISION, NLP, INDUSTRY]
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 
@@ -46,6 +44,7 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch menu[indexPath.row] {
         case VISION:
+            self.performSegue(withIdentifier: "showVisionDemos", sender: self)
             break
         case NLP:
             break
