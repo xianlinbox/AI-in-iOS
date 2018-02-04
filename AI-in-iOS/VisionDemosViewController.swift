@@ -1,19 +1,14 @@
 //
-//  ViewController.swift
+//  VisionDemosViewController.swift
 //  AI-in-iOS
 //
-//  Created by Xianning Liu  on 02/02/2018.
+//  Created by Xianning Liu  on 04/02/2018.
 //  Copyright © 2018 Xianning Liu . All rights reserved.
 //
-
 import UIKit
 
-let VISION = "Vision Demos"
-let NLP = "NLP Demos"
-let INDUSTRY = "Industry Examples"
-
-class HomeViewController: UITableViewController {
-    let menu:[String] = [VISION, NLP, INDUSTRY]
+class VisionDemosViewController: UITableViewController {
+    let demos:[String] = ["Vision Demos","NLP Demos"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,34 +21,23 @@ class HomeViewController: UITableViewController {
 }
 
 //MARK: TableView Datasource
-extension HomeViewController {
+extension VisionDemosViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.menu.count
+        return self.demos.count
     }
 }
 
 //MARK: TableView Delegate
-extension HomeViewController {
+extension VisionDemosViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuItem", for: indexPath)
-        cell.textLabel?.text = menu[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DemoItem", for: indexPath)
+        cell.textLabel?.text = demos[indexPath.row]
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch menu[indexPath.row] {
-        case VISION:
-            break
-        case NLP:
-            break
-        case INDUSTRY:
-            break
-        default:
-            break
-        }
-    }
+    
 }
 
