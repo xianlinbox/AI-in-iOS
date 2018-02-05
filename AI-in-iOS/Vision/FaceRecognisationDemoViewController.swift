@@ -17,10 +17,35 @@ class FaceRecognisationDemoViewController: UIViewController,UIImagePickerControl
         imagePicker.delegate = self
     }
     @IBAction func pickImageFromLib() {
-        imagePicker.allowsEditing = false;
-        imagePicker.sourceType = .photoLibrary;
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
         imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func shootPhotoByCamera() {
+        if(UIImagePickerController.isSourceTypeAvailable(.camera)){
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = .camera
+            imagePicker.cameraCaptureMode = .photo
+            imagePicker.modalPresentationStyle = .fullScreen
+            self.present(imagePicker, animated: true, completion: nil)
+        } else {
+            noCameraAlert()
+        }
+    }
+    
+    func noCameraAlert() {
+        let alertVC = UIAlertController(
+            title: "No Camera",
+            message: "Sorry, this device has no camera",
+            preferredStyle: .alert)
+        let okAction = UIAlertAction(
+            title: "OK",
+            style:.default,
+            handler: nil)
+        alertVC.addAction(okAction)
+        present(alertVC, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,3 +66,4 @@ extension FaceRecognisationDemoViewController {
         self.dismiss(animated: true, completion: nil)
     }
 }
+

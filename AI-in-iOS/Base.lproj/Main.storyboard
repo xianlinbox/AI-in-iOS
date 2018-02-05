@@ -95,7 +95,7 @@
                 <viewController id="7mS-Kl-v0g" customClass="FaceRecognisationDemoViewController" customModule="AI_in_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L1V-PH-7kx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KSI-86-PQF">
                                 <rect key="frame" x="27" y="86" width="321" height="194"/>
@@ -108,6 +108,13 @@
                                     <action selector="pickImageFromLib" destination="7mS-Kl-v0g" eventType="touchUpInside" id="Rkh-md-VGL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMn-Sw-mjC">
+                                <rect key="frame" x="135" y="347" width="89" height="30"/>
+                                <state key="normal" title="Take a Photo"/>
+                                <connections>
+                                    <action selector="shootPhotoByCamera" destination="7mS-Kl-v0g" eventType="touchUpInside" id="5e8-hj-sjC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -116,7 +123,9 @@
                             <constraint firstItem="Et0-Hb-WVi" firstAttribute="top" secondItem="KSI-86-PQF" secondAttribute="bottom" constant="20" id="WPK-MX-r2b"/>
                             <constraint firstItem="KSI-86-PQF" firstAttribute="centerX" secondItem="L1V-PH-7kx" secondAttribute="centerX" id="aNF-Ne-ZJK"/>
                             <constraint firstItem="Et0-Hb-WVi" firstAttribute="centerX" secondItem="KSI-86-PQF" secondAttribute="centerX" id="h3o-NW-KcD"/>
+                            <constraint firstItem="yMn-Sw-mjC" firstAttribute="centerX" secondItem="Et0-Hb-WVi" secondAttribute="centerX" constant="-8" id="hif-M0-GlW"/>
                             <constraint firstItem="yvq-NP-jTL" firstAttribute="bottom" secondItem="Et0-Hb-WVi" secondAttribute="bottom" constant="337" id="jBg-0K-RK7"/>
+                            <constraint firstItem="yMn-Sw-mjC" firstAttribute="top" secondItem="Et0-Hb-WVi" secondAttribute="bottom" constant="17" id="sv6-Aj-h5X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yvq-NP-jTL"/>
                     </view>
