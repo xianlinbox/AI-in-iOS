@@ -104,6 +104,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Et0-Hb-WVi">
                                 <rect key="frame" x="109" y="300" width="157" height="30"/>
                                 <state key="normal" title="Choose Another Image"/>
+                                <connections>
+                                    <action selector="pickImageFromLib" destination="7mS-Kl-v0g" eventType="touchUpInside" id="Rkh-md-VGL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -117,6 +120,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yvq-NP-jTL"/>
                     </view>
+                    <connections>
+                        <outlet property="changeImageButton" destination="Et0-Hb-WVi" id="vcE-hz-cYH"/>
+                        <outlet property="imageView" destination="KSI-86-PQF" id="ZEr-93-FfM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhE-eh-lcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
