@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,10 +81,46 @@
                             <outlet property="delegate" destination="0LZ-zn-As4" id="otj-S8-QIL"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="7mS-Kl-v0g" kind="show" identifier="showFaceRecogDemo" id="EvI-xb-3Fd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSh-jf-GuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="334" y="-434"/>
+        </scene>
+        <!--Face Recognisation Demo View Controller-->
+        <scene sceneID="vVw-d1-VRF">
+            <objects>
+                <viewController id="7mS-Kl-v0g" customClass="FaceRecognisationDemoViewController" customModule="AI_in_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L1V-PH-7kx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KSI-86-PQF">
+                                <rect key="frame" x="27" y="86" width="321" height="194"/>
+                                <color key="backgroundColor" red="0.38823530080000002" green="0.63921570780000003" blue="0.36078432199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Et0-Hb-WVi">
+                                <rect key="frame" x="109" y="300" width="157" height="30"/>
+                                <state key="normal" title="Choose Another Image"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KSI-86-PQF" firstAttribute="top" secondItem="yvq-NP-jTL" secondAttribute="top" constant="22" id="8H0-ya-SpW"/>
+                            <constraint firstItem="KSI-86-PQF" firstAttribute="leading" secondItem="yvq-NP-jTL" secondAttribute="leading" constant="27" id="9qx-6T-8Pv"/>
+                            <constraint firstItem="Et0-Hb-WVi" firstAttribute="top" secondItem="KSI-86-PQF" secondAttribute="bottom" constant="20" id="WPK-MX-r2b"/>
+                            <constraint firstItem="KSI-86-PQF" firstAttribute="centerX" secondItem="L1V-PH-7kx" secondAttribute="centerX" id="aNF-Ne-ZJK"/>
+                            <constraint firstItem="Et0-Hb-WVi" firstAttribute="centerX" secondItem="KSI-86-PQF" secondAttribute="centerX" id="h3o-NW-KcD"/>
+                            <constraint firstItem="yvq-NP-jTL" firstAttribute="bottom" secondItem="Et0-Hb-WVi" secondAttribute="bottom" constant="337" id="jBg-0K-RK7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yvq-NP-jTL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhE-eh-lcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472.8" y="-914.392803598201"/>
         </scene>
     </scenes>
 </document>

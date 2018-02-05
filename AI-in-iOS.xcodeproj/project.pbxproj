@@ -16,6 +16,7 @@
 		DFABB7402024CD770074C3E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFABB73E2024CD770074C3E1 /* LaunchScreen.storyboard */; };
 		DFABB74B2024CD770074C3E1 /* AI_in_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFABB74A2024CD770074C3E1 /* AI_in_iOSTests.swift */; };
 		DFEE3E242027695500A17295 /* VisionDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE3E232027695500A17295 /* VisionDemosViewController.swift */; };
+		DFEE3E272028054400A17295 /* FaceRecognisationDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE3E262028054400A17295 /* FaceRecognisationDemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		DFABB74A2024CD770074C3E1 /* AI_in_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AI_in_iOSTests.swift; sourceTree = "<group>"; };
 		DFABB74C2024CD770074C3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFEE3E232027695500A17295 /* VisionDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionDemosViewController.swift; sourceTree = "<group>"; };
+		DFEE3E262028054400A17295 /* FaceRecognisationDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognisationDemoViewController.swift; sourceTree = "<group>"; };
 		F77A30170845CF53958F5621 /* Pods-AI-in-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-in-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AI-in-iOS/Pods-AI-in-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		FC983ABCB2A0737316CB9E45 /* Pods_AI_in_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AI_in_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,9 +113,9 @@
 		DFABB7342024CD770074C3E1 /* AI-in-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				DFEE3E252028051100A17295 /* Vision */,
 				DFABB7352024CD770074C3E1 /* AppDelegate.swift */,
 				DFABB7372024CD770074C3E1 /* HomeViewController.swift */,
-				DFEE3E232027695500A17295 /* VisionDemosViewController.swift */,
 				DFABB7392024CD770074C3E1 /* Main.storyboard */,
 				DFABB73C2024CD770074C3E1 /* Assets.xcassets */,
 				DFABB73E2024CD770074C3E1 /* LaunchScreen.storyboard */,
@@ -129,6 +131,15 @@
 				DFABB74C2024CD770074C3E1 /* Info.plist */,
 			);
 			path = "AI-in-iOSTests";
+			sourceTree = "<group>";
+		};
+		DFEE3E252028051100A17295 /* Vision */ = {
+			isa = PBXGroup;
+			children = (
+				DFEE3E232027695500A17295 /* VisionDemosViewController.swift */,
+				DFEE3E262028054400A17295 /* FaceRecognisationDemoViewController.swift */,
+			);
+			path = Vision;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEE3E272028054400A17295 /* FaceRecognisationDemoViewController.swift in Sources */,
 				DFEE3E242027695500A17295 /* VisionDemosViewController.swift in Sources */,
 				DFABB7382024CD770074C3E1 /* HomeViewController.swift in Sources */,
 				DFABB7362024CD770074C3E1 /* AppDelegate.swift in Sources */,

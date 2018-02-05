@@ -41,7 +41,14 @@ extension VisionDemosViewController {
         cell.textLabel?.text = demos[indexPath.row]
         return cell
     }
-    
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch demos[indexPath.row] {
+        case FACE_RECOG:
+            self.performSegue(withIdentifier: "showFaceRecogDemo", sender: self)
+        default:
+            print("Test**********")
+            break;
+        }
+    }
 }
 
