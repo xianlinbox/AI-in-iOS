@@ -48,10 +48,6 @@ class FaceRecognisationDemoViewController: UIViewController,UIImagePickerControl
         self.present(alertVC, animated: true, completion: nil)
     }
     
-    private func detectImage() {
-        
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -64,6 +60,19 @@ extension FaceRecognisationDemoViewController {
         imageView.contentMode = .scaleAspectFill
         imageView.image = newImage
         dismiss(animated: true, completion: nil)
+        VisionUtils.detectImage(image: newImage) { (faceMarks) in
+            for mark in faceMarks {
+                self.imageView.addSubview(self.createBoxView(frame: mark.cgRectValue))
+            }
+        }
+    }
+    
+    private func createBoxView(frame:CGRect) -> UIView{
+        let boxView = UIView(frame: frame)
+        boxView.backgroundColor = UIColor.green
+        boxView.layer.borderColor = UIColor.red.cgColor
+        boxView.layer.borderWidth = 2
+        return boxView
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

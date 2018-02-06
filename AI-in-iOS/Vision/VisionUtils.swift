@@ -11,25 +11,23 @@ import UIKit
 
 struct VisionUtils {
     
-    static func detectImage(image:UIImage){
+    static func detectImage(image:UIImage, completion:@escaping ([NSValue]) -> Void){
         let ciImage = CIImage(image: image)
         let faceDetectRequest = VNDetectFaceRectanglesRequest { (request, error) in
             guard let observations = request.results as? [VNFaceObservation] else {
                 fatalError("The Face detect results is not match!")
             }
-            markFaces(image:image, faces:observations)
+            markFaces(image: image, faces: observations, completion: completion)
         }
         let requestHandler = VNImageRequestHandler(ciImage: ciImage!, options:[:])
-        DispatchQueue.global(qos: .userInteractive).async{
-            do {
-                try requestHandler.perform([faceDetectRequest])
-            }catch{
-                fatalError(error.localizedDescription)
-            }
+        do {
+            try requestHandler.perform([faceDetectRequest])
+        }catch{
+            fatalError(error.localizedDescription)
         }
     }
     
-    static func markFaces(image:UIImage, faces:[VNFaceObservation]) {
+    static func markFaces(image:UIImage, faces:[VNFaceObservation], completion:([NSValue]) -> Void) {
         var faceMarks:[NSValue] = [];
         for face in faces {
             let bounds = face.boundingBox
@@ -37,6 +35,7 @@ struct VisionUtils {
             let faceData = NSValue(cgRect: faceRect)
             faceMarks.append(faceData)
         }
+        completion(faceMarks)
     }
     
     private static func convertRect(_ oldRect:CGRect, imageSize: CGSize) -> CGRect{
