@@ -31,11 +31,11 @@ class FaceRecognisationDemoViewController: UIViewController,UIImagePickerControl
             imagePicker.modalPresentationStyle = .fullScreen
             self.present(imagePicker, animated: true, completion: nil)
         } else {
-            noCameraAlert()
+            self.noCameraAlert()
         }
     }
     
-    func noCameraAlert() {
+    private func noCameraAlert() {
         let alertVC = UIAlertController(
             title: "No Camera",
             message: "Sorry, this device has no camera",
@@ -45,7 +45,11 @@ class FaceRecognisationDemoViewController: UIViewController,UIImagePickerControl
             style:.default,
             handler: nil)
         alertVC.addAction(okAction)
-        present(alertVC, animated: true, completion: nil)
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    private func detectImage() {
+        
     }
     
     override func didReceiveMemoryWarning() {
