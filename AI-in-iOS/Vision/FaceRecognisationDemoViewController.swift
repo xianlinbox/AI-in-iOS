@@ -56,15 +56,19 @@ class FaceRecognisationDemoViewController: UIViewController,UIImagePickerControl
 //MARK: ImagePicker Delegate
 extension FaceRecognisationDemoViewController {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        clearOldSubViews();
         let newImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         let ratio = newImage.size.height/newImage.size.width
         imageView.frame = CGRect(x: imageView.frame.origin.x, y: imageView.frame.origin.y, width: imageView.frame.size.width, height: imageView.frame.size.width * ratio)
+        imageView.setNeedsLayout()
         imageView.contentMode = .scaleAspectFill
         imageView.image = newImage
         dismiss(animated: true, completion: nil)
-        VisionUtils.detectImage(image: newImage) { (faceMarks) in
-            for mark in faceMarks {
-                self.imageView.addSubview(self.createBoxView(frame: mark.cgRectValue))
+        DispatchQueue.main.async {
+            VisionUtils.detectImage(image: newImage) { (faceMarks) in
+                for mark in faceMarks {
+                    self.imageView.addSubview(self.createBoxView(frame: self.scaleFrame(mark.cgRectValue)))
+                }
             }
         }
      }
@@ -73,12 +77,20 @@ extension FaceRecognisationDemoViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    private func createBoxView(frame:CGRect) -> UIView{
+    private func clearOldSubViews() {
+        for subView in self.imageView.subviews {
+            subView.removeFromSuperview()
+        }
+    }
+    private func scaleFrame(_ originFrame:CGRect) -> CGRect{
         let transform = CGAffineTransform(scaleX: 1, y: -1).translatedBy(x: 0, y: -self.imageView!.frame.size.height)
         let translate = CGAffineTransform.identity.scaledBy(x: self.imageView!.frame.size.width, y: self.imageView!.frame.size.height)
-        let scaleFrame = frame.applying(translate).applying(transform)
-        let boxView = UIView(frame: scaleFrame)
-        boxView.backgroundColor = UIColor.green
+        return originFrame.applying(translate).applying(transform)
+    }
+    
+    private func createBoxView(frame:CGRect) -> UIView{
+        let boxView = UIView(frame: frame)
+        boxView.backgroundColor = UIColor.clear
         boxView.layer.borderColor = UIColor.red.cgColor
         boxView.layer.borderWidth = 2
         return boxView
