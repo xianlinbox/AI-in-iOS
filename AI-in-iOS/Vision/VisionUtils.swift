@@ -17,7 +17,7 @@ struct VisionUtils {
             guard let observations = request.results as? [VNFaceObservation] else {
                 fatalError("The Face detect results is not match!")
             }
-            markFaces(image: image, faces: observations, completion: completion)
+            markFaces(faces: observations, completion: completion)
         }
         let requestHandler = VNImageRequestHandler(ciImage: ciImage!, options:[:])
         do {
@@ -27,23 +27,13 @@ struct VisionUtils {
         }
     }
     
-    static func markFaces(image:UIImage, faces:[VNFaceObservation], completion:([NSValue]) -> Void) {
+    static func markFaces(faces:[VNFaceObservation], completion:([NSValue]) -> Void) {
         var faceMarks:[NSValue] = [];
         for face in faces {
-            let bounds = face.boundingBox
-            let faceRect = convertRect(bounds, imageSize: image.size)
-            let faceData = NSValue(cgRect: faceRect)
+            let faceData = NSValue(cgRect: face.boundingBox)
             faceMarks.append(faceData)
         }
         completion(faceMarks)
-    }
-    
-    private static func convertRect(_ oldRect:CGRect, imageSize: CGSize) -> CGRect{
-        let w = oldRect.size.width * imageSize.width
-        let h = oldRect.size.height * imageSize.height
-        let x = oldRect.origin.x * imageSize.width
-        let y = imageSize.height - (oldRect.origin.y * imageSize.height) - h
-        return CGRect(x: x, y: y, width: w, height: h)
     }
 }
 
