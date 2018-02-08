@@ -59,10 +59,10 @@ extension FaceRecognisationDemoViewController {
         clearOldSubViews();
         let newImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         let ratio = newImage.size.height/newImage.size.width
-        imageView.frame = CGRect(x: imageView.frame.origin.x, y: imageView.frame.origin.y, width: imageView.frame.size.width, height: imageView.frame.size.width * ratio)
-        imageView.setNeedsLayout()
-        imageView.contentMode = .scaleAspectFill
-        imageView.image = newImage
+        self.imageView = UIImageView(frame: CGRect(x: 0, y: 100, width: self.view.frame.size.width, height: self.view.frame.size.width * ratio))
+        self.imageView.contentMode = .scaleAspectFill
+        self.imageView.image = newImage
+        self.view.addSubview(self.imageView)
         dismiss(animated: true, completion: nil)
         DispatchQueue.main.async {
             VisionUtils.detectImage(image: newImage) { (faceMarks) in
@@ -81,6 +81,7 @@ extension FaceRecognisationDemoViewController {
         for subView in self.imageView.subviews {
             subView.removeFromSuperview()
         }
+        self.imageView?.removeFromSuperview()
     }
     private func scaleFrame(_ originFrame:CGRect) -> CGRect{
         let transform = CGAffineTransform(scaleX: 1, y: -1).translatedBy(x: 0, y: -self.imageView!.frame.size.height)

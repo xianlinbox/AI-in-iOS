@@ -120,11 +120,11 @@
                         <constraints>
                             <constraint firstItem="KSI-86-PQF" firstAttribute="top" secondItem="yvq-NP-jTL" secondAttribute="top" constant="22" id="8H0-ya-SpW"/>
                             <constraint firstItem="KSI-86-PQF" firstAttribute="leading" secondItem="yvq-NP-jTL" secondAttribute="leading" constant="27" id="9qx-6T-8Pv"/>
-                            <constraint firstItem="Et0-Hb-WVi" firstAttribute="top" secondItem="KSI-86-PQF" secondAttribute="bottom" constant="20" id="WPK-MX-r2b"/>
+                            <constraint firstItem="yvq-NP-jTL" firstAttribute="bottom" secondItem="KSI-86-PQF" secondAttribute="bottom" constant="387" id="T6d-2H-wha"/>
                             <constraint firstItem="KSI-86-PQF" firstAttribute="centerX" secondItem="L1V-PH-7kx" secondAttribute="centerX" id="aNF-Ne-ZJK"/>
-                            <constraint firstItem="Et0-Hb-WVi" firstAttribute="centerX" secondItem="KSI-86-PQF" secondAttribute="centerX" id="h3o-NW-KcD"/>
                             <constraint firstItem="yMn-Sw-mjC" firstAttribute="centerX" secondItem="Et0-Hb-WVi" secondAttribute="centerX" constant="-8" id="hif-M0-GlW"/>
                             <constraint firstItem="yvq-NP-jTL" firstAttribute="bottom" secondItem="Et0-Hb-WVi" secondAttribute="bottom" constant="337" id="jBg-0K-RK7"/>
+                            <constraint firstItem="Et0-Hb-WVi" firstAttribute="centerX" secondItem="yvq-NP-jTL" secondAttribute="centerX" id="ju6-gA-3m6"/>
                             <constraint firstItem="yMn-Sw-mjC" firstAttribute="top" secondItem="Et0-Hb-WVi" secondAttribute="bottom" constant="17" id="sv6-Aj-h5X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yvq-NP-jTL"/>
