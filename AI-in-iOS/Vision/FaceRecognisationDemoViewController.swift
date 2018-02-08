@@ -8,13 +8,29 @@
 import UIKit
 
 class FaceRecognisationDemoViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    @IBOutlet var imageView:UIImageView!
+    var imageView:UIImageView!
     @IBOutlet var changeImageButton:UIButton!
     var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        self.reloadImage(newImage:nil)
+    }
+    
+    func reloadImage(newImage:UIImage?){
+        let imageToDetect = newImage ?? UIImage(named: "twer")
+        if let image = imageToDetect {
+            self.clearOldSubViews();
+            self.updateImageView(image)
+        }
+        DispatchQueue.main.async {
+            VisionUtils.detectImage(image: self.imageView.image!) { (faceMarks) in
+                for mark in faceMarks {
+                    self.imageView.addSubview(self.createBoxView(frame: self.scaleFrame(mark.cgRectValue)))
+                }
+            }
+        }
     }
     @IBAction func pickImageFromLib() {
         imagePicker.allowsEditing = false
@@ -55,34 +71,32 @@ class FaceRecognisationDemoViewController: UIViewController,UIImagePickerControl
 
 //MARK: ImagePicker Delegate
 extension FaceRecognisationDemoViewController {
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        clearOldSubViews();
         let newImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        let ratio = newImage.size.height/newImage.size.width
-        self.imageView = UIImageView(frame: CGRect(x: 0, y: 100, width: self.view.frame.size.width, height: self.view.frame.size.width * ratio))
-        self.imageView.contentMode = .scaleAspectFill
-        self.imageView.image = newImage
-        self.view.addSubview(self.imageView)
+        self.reloadImage(newImage: newImage)
         dismiss(animated: true, completion: nil)
-        DispatchQueue.main.async {
-            VisionUtils.detectImage(image: newImage) { (faceMarks) in
-                for mark in faceMarks {
-                    self.imageView.addSubview(self.createBoxView(frame: self.scaleFrame(mark.cgRectValue)))
-                }
-            }
-        }
-     }
+    }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
     
     private func clearOldSubViews() {
-        for subView in self.imageView.subviews {
+        let subViews = self.imageView?.subviews ?? []
+        for subView in subViews {
             subView.removeFromSuperview()
         }
         self.imageView?.removeFromSuperview()
     }
+    
+    fileprivate func updateImageView(_ newImage: UIImage) {
+        let ratio = newImage.size.height/newImage.size.width
+        self.imageView = UIImageView(frame: CGRect(x: 0, y: 100, width: self.view.frame.size.width, height: self.view.frame.size.width * ratio))
+        self.imageView.image = newImage
+        self.view.addSubview(self.imageView)
+    }
+    
     private func scaleFrame(_ originFrame:CGRect) -> CGRect{
         let transform = CGAffineTransform(scaleX: 1, y: -1).translatedBy(x: 0, y: -self.imageView!.frame.size.height)
         let translate = CGAffineTransform.identity.scaledBy(x: self.imageView!.frame.size.width, y: self.imageView!.frame.size.height)
