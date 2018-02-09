@@ -9,13 +9,22 @@ import UIKit
 
 class FaceRecognisationDemoViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var imageView:UIImageView!
-    @IBOutlet var changeImageButton:UIButton!
     var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        self.addButtons()
         self.reloadImage(newImage:nil)
+    }
+    
+    func addButtons() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Camera", style: .plain, target: self, action: #selector(shootPhotoByCamera))
+        let changeButton = UIButton(frame: CGRect(x: UIConstants.SCREEN_WIDTH/2 - 100, y: UIConstants.SCREEN_HEIGHT - 100, width: 200, height: 30))
+        changeButton.setTitle("Choose Another Image", for: .normal)
+        changeButton.backgroundColor=UIColor.blue
+        changeButton.addTarget(self, action: #selector(pickImageFromLib), for: .touchUpInside)
+        self.view.addSubview(changeButton)
     }
     
     func reloadImage(newImage:UIImage?){
@@ -32,14 +41,14 @@ class FaceRecognisationDemoViewController: UIViewController,UIImagePickerControl
             }
         }
     }
-    @IBAction func pickImageFromLib() {
+    @objc func pickImageFromLib() {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
         imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         self.present(imagePicker, animated: true, completion: nil)
     }
     
-    @IBAction func shootPhotoByCamera() {
+    @objc func shootPhotoByCamera() {
         if(UIImagePickerController.isSourceTypeAvailable(.camera)){
             imagePicker.allowsEditing = false
             imagePicker.sourceType = .camera
