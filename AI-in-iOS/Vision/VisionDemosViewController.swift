@@ -8,13 +8,14 @@
 import UIKit
 
 let FACE_RECOG = "Face Recoginisation"
+let FACE_LANDMARKS = "Face Landmarks"
 let SPEC_RECOG = "Spec Recoginisation"
 let TEXT_RECOG = "Spec Recoginisation"
 let REALTIME_FACE_RECOG = "Realtime Face Recoginisation"
 let REALTIME_FACE_ADDON = "Realtime Face Add-on"
 
 class VisionDemosViewController: UITableViewController {
-    let demos:[String] = [FACE_RECOG, SPEC_RECOG, TEXT_RECOG, REALTIME_FACE_RECOG, REALTIME_FACE_ADDON]
+    let demos:[String] = [FACE_RECOG, FACE_LANDMARKS, SPEC_RECOG, TEXT_RECOG, REALTIME_FACE_RECOG, REALTIME_FACE_ADDON]
     override func viewDidLoad() {
         super.viewDidLoad()
     }

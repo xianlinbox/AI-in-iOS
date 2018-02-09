@@ -83,11 +83,27 @@
                     </tableView>
                     <connections>
                         <segue destination="7mS-Kl-v0g" kind="show" identifier="showFaceRecogDemo" id="EvI-xb-3Fd"/>
+                        <segue destination="uvq-QQ-Al1" kind="show" identifier="showFaceLandmarks" id="QSs-XG-Tbb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSh-jf-GuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="334" y="-434"/>
+        </scene>
+        <!--Face Landmarks Demo View Controller-->
+        <scene sceneID="22a-cx-lF9">
+            <objects>
+                <viewController id="uvq-QQ-Al1" customClass="FaceLandmarksDemoViewController" customModule="AI_in_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KKJ-DP-Tbd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="agD-0i-eUy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D4R-Hu-ere" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513" y="-171"/>
         </scene>
         <!--Face Recognisation Demo View Controller-->
         <scene sceneID="vVw-d1-VRF">
