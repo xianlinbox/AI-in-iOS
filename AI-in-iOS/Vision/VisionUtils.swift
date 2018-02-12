@@ -18,8 +18,6 @@ struct VisionUtils {
             imageDetectRequest = createFaceRecogRequest(completion)
         case FACE_LANDMARKS:
             imageDetectRequest = createFaceLandmarksRequest(completion)
-        case BARCODE_READ:
-            imageDetectRequest = createBarcodeReadRequest(completion)
         default:
             break
         }
@@ -66,30 +64,34 @@ struct VisionUtils {
             }
         })
     }
+}
+
+extension VisionUtils {
     
-    private static func createBarcodeReadRequest(_ completion:([NSValue]) -> Void) -> VNImageBasedRequest {
+    static func detectBarcode(image:UIImage, completion:@escaping (String) -> Void){
+        let imageDetectRequest = createBarcodeReadRequest(completion)
+        do {
+            let ciImage = CIImage(image: image)
+            try VNImageRequestHandler(ciImage: ciImage!, options:[:]).perform([imageDetectRequest])
+        }catch{
+            fatalError(error.localizedDescription)
+        }
+    }
+    
+    private static func createBarcodeReadRequest(_ completion:@escaping (String) -> Void) -> VNImageBasedRequest {
         return VNDetectBarcodesRequest(completionHandler: { request, error in
-//            guard let results = request.results else { return }
-//
-//            // Loopm through the found results
-//            for result in results {
-//
-//                // Cast the result to a barcode-observation
-//                if let barcode = result as? VNBarcodeObservation {
-//
-//                    // Print barcode-values
-//                    print("Symbology: \(barcode.symbology.rawValue)")
-//
-//                    if let desc = barcode.barcodeDescriptor as? CIQRCodeDescriptor {
-//                        let content = String(data: desc.errorCorrectedPayload, encoding: .utf8)
-//
-//                        // FIXME: This currently returns nil. I did not find any docs on how to encode the data properly so far.
-//                        print("Payload: \(String(describing: content))")
-//                        print("Error-Correction-Level: \(desc.errorCorrectionLevel)")
-//                        print("Symbol-Version: \(desc.symbolVersion)")
-//                    }
-//                }
-//            }
+            guard let results = request.results else {
+                print("!!!!!!!!!!No result found!!!!!!!!!!!")
+                return
+            }
+            for result in results {
+                let barcode = result as? VNBarcodeObservation
+                if barcode != nil {
+                    if barcode!.symbology == .QR {
+                        completion(barcode!.payloadStringValue!)
+                    }
+                }
+            }
         })
     }
 }

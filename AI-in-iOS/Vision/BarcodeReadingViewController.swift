@@ -13,6 +13,7 @@ class BarcodeAnaylysisViewController: ImageAnalysisBaseViewController {
     var textView:UITextView!
     override func viewDidLoad() {
         super.viewDidLoad();
+        self.reloadImage(newImage: UIImage(named: "QRCode"))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -20,6 +21,9 @@ class BarcodeAnaylysisViewController: ImageAnalysisBaseViewController {
     }
     
     override func performAnalysis() {
+        VisionUtils.detectBarcode(image: self.imageView.image!) { (result) in
+            self.textView.text = result
+        }
     }
     
     private func addTextArea() {
