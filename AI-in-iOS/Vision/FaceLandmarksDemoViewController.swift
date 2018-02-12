@@ -8,7 +8,7 @@
 import UIKit
 import Vision
 
-class FaceLandmarksDemoViewController: FaceRecognisationDemoViewController {
+class FaceLandmarksDemoViewController: ImageAnalysisBaseViewController {
  
     override func performAnalysis() {
         VisionUtils.detectImage(detectType: FACE_LANDMARKS, image: self.imageView.image!, completion: { (result) in

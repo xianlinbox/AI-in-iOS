@@ -17,6 +17,7 @@
 		DFABB73D2024CD770074C3E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFABB73C2024CD770074C3E1 /* Assets.xcassets */; };
 		DFABB7402024CD770074C3E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFABB73E2024CD770074C3E1 /* LaunchScreen.storyboard */; };
 		DFABB74B2024CD770074C3E1 /* AI_in_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFABB74A2024CD770074C3E1 /* AI_in_iOSTests.swift */; };
+		DFAFCAFA2031FE5000556F68 /* ImageAnalysisBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFCAF92031FE5000556F68 /* ImageAnalysisBaseViewController.swift */; };
 		DFB489222028F402003FE79B /* VisionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB489212028F402003FE79B /* VisionUtils.swift */; };
 		DFEE3E242027695500A17295 /* VisionDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE3E232027695500A17295 /* VisionDemosViewController.swift */; };
 		DFEE3E272028054400A17295 /* FaceRecognisationDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE3E262028054400A17295 /* FaceRecognisationDemoViewController.swift */; };
@@ -49,6 +50,7 @@
 		DFABB7462024CD770074C3E1 /* AI-in-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AI-in-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFABB74A2024CD770074C3E1 /* AI_in_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AI_in_iOSTests.swift; sourceTree = "<group>"; };
 		DFABB74C2024CD770074C3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFAFCAF92031FE5000556F68 /* ImageAnalysisBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnalysisBaseViewController.swift; sourceTree = "<group>"; };
 		DFB489212028F402003FE79B /* VisionUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionUtils.swift; sourceTree = "<group>"; };
 		DFEE3E232027695500A17295 /* VisionDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionDemosViewController.swift; sourceTree = "<group>"; };
 		DFEE3E262028054400A17295 /* FaceRecognisationDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognisationDemoViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				DFEE3E262028054400A17295 /* FaceRecognisationDemoViewController.swift */,
 				DF78007A202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift */,
 				DFB489212028F402003FE79B /* VisionUtils.swift */,
+				DFAFCAF92031FE5000556F68 /* ImageAnalysisBaseViewController.swift */,
 			);
 			path = Vision;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFEE3E272028054400A17295 /* FaceRecognisationDemoViewController.swift in Sources */,
+				DFAFCAFA2031FE5000556F68 /* ImageAnalysisBaseViewController.swift in Sources */,
 				DFB489222028F402003FE79B /* VisionUtils.swift in Sources */,
 				DFEE3E242027695500A17295 /* VisionDemosViewController.swift in Sources */,
 				DFABB7382024CD770074C3E1 /* HomeViewController.swift in Sources */,
