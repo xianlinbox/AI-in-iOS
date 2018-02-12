@@ -80,18 +80,14 @@ extension VisionUtils {
     
     private static func createBarcodeReadRequest(_ completion:@escaping (String) -> Void) -> VNImageBasedRequest {
         return VNDetectBarcodesRequest(completionHandler: { request, error in
-            guard let results = request.results else {
-                print("!!!!!!!!!!No result found!!!!!!!!!!!")
+            guard let results = request.results as? [VNBarcodeObservation] else {
+                print("!!!!!!!!!!something bad happens!!!")
                 return
             }
-            for result in results {
-                let barcode = result as? VNBarcodeObservation
-                if barcode != nil {
-                    if barcode!.symbology == .QR {
-                        completion(barcode!.payloadStringValue!)
-                    }
-                }
+            if let barcode = results.first {
+                completion(barcode.payloadStringValue!)
             }
+            
         })
     }
 }
