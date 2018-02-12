@@ -12,19 +12,21 @@ import UIKit
 struct VisionUtils {
     
     static func detectImage(detectType:String, image:UIImage, completion:@escaping ([NSValue]) -> Void){
-        var faceDetectRequest:VNImageBasedRequest!
+        var imageDetectRequest:VNImageBasedRequest!
         switch detectType {
         case FACE_RECOG:
-            faceDetectRequest = createFaceRecogRequest(completion)
+            imageDetectRequest = createFaceRecogRequest(completion)
         case FACE_LANDMARKS:
-            faceDetectRequest = createFaceLandmarksRequest(completion)
+            imageDetectRequest = createFaceLandmarksRequest(completion)
+        case BARCODE_READ:
+            imageDetectRequest = createBarcodeReadRequest(completion)
         default:
             break
         }
         
         do {
             let ciImage = CIImage(image: image)
-            try VNImageRequestHandler(ciImage: ciImage!, options:[:]).perform([faceDetectRequest])
+            try VNImageRequestHandler(ciImage: ciImage!, options:[:]).perform([imageDetectRequest])
         }catch{
             fatalError(error.localizedDescription)
         }
@@ -62,6 +64,32 @@ struct VisionUtils {
                     }
                 }
             }
+        })
+    }
+    
+    private static func createBarcodeReadRequest(_ completion:([NSValue]) -> Void) -> VNImageBasedRequest {
+        return VNDetectBarcodesRequest(completionHandler: { request, error in
+//            guard let results = request.results else { return }
+//
+//            // Loopm through the found results
+//            for result in results {
+//
+//                // Cast the result to a barcode-observation
+//                if let barcode = result as? VNBarcodeObservation {
+//
+//                    // Print barcode-values
+//                    print("Symbology: \(barcode.symbology.rawValue)")
+//
+//                    if let desc = barcode.barcodeDescriptor as? CIQRCodeDescriptor {
+//                        let content = String(data: desc.errorCorrectedPayload, encoding: .utf8)
+//
+//                        // FIXME: This currently returns nil. I did not find any docs on how to encode the data properly so far.
+//                        print("Payload: \(String(describing: content))")
+//                        print("Error-Correction-Level: \(desc.errorCorrectionLevel)")
+//                        print("Symbol-Version: \(desc.symbolVersion)")
+//                    }
+//                }
+//            }
         })
     }
 }

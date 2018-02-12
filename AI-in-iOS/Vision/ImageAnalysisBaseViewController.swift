@@ -28,11 +28,9 @@ class ImageAnalysisBaseViewController: UIViewController,UIImagePickerControllerD
     }
     
     func performAnalysis() {
-        VisionUtils.detectImage(detectType:FACE_RECOG, image: self.imageView.image!) { (faceMarks) in
-            for mark in faceMarks {
-                self.imageView.addSubview(self.createBoxView(frame: self.scaleFrame(mark.cgRectValue)))
-            }
-        }
+        print("*******************")
+        print("Please implement the perform Analysis method!")
+        print("*******************")
     }
     
     func reloadImage(newImage:UIImage?){

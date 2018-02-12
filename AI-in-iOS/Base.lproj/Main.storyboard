@@ -84,6 +84,7 @@
                     <connections>
                         <segue destination="7mS-Kl-v0g" kind="show" identifier="showFaceRecogDemo" id="EvI-xb-3Fd"/>
                         <segue destination="uvq-QQ-Al1" kind="show" identifier="showFaceLandmarks" id="QSs-XG-Tbb"/>
+                        <segue destination="otc-WY-D2c" kind="show" identifier="showBarcodeDemo" id="2RV-MG-1na"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSh-jf-GuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -103,7 +104,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4R-Hu-ere" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="-171"/>
+            <point key="canvasLocation" x="1570" y="-1410"/>
+        </scene>
+        <!--Barcode Anaylysis View Controller-->
+        <scene sceneID="cDt-zg-ROz">
+            <objects>
+                <viewController id="otc-WY-D2c" customClass="BarcodeAnaylysisViewController" customModule="AI_in_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pFX-AR-auh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1wj-yV-STj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WVk-rk-R5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569" y="-717"/>
         </scene>
         <!--Face Recognisation Demo View Controller-->
         <scene sceneID="vVw-d1-VRF">
@@ -118,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhE-eh-lcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1472.8" y="-914.392803598201"/>
+            <point key="canvasLocation" x="1570" y="-2093"/>
         </scene>
     </scenes>
 </document>

@@ -9,13 +9,14 @@ import UIKit
 
 let FACE_RECOG = "Face Recoginisation"
 let FACE_LANDMARKS = "Face Landmarks"
+let BARCODE_READ = "Barcode Reading"
 let SPEC_RECOG = "Spec Recoginisation"
-let TEXT_RECOG = "Spec Recoginisation"
+let TEXT_RECOG = "Text Recoginisation"
 let REALTIME_FACE_RECOG = "Realtime Face Recoginisation"
 let REALTIME_FACE_ADDON = "Realtime Face Add-on"
 
 class VisionDemosViewController: UITableViewController {
-    let demos:[String] = [FACE_RECOG, FACE_LANDMARKS, SPEC_RECOG, TEXT_RECOG, REALTIME_FACE_RECOG, REALTIME_FACE_ADDON]
+    let demos:[String] = [FACE_RECOG, FACE_LANDMARKS, BARCODE_READ, SPEC_RECOG, TEXT_RECOG, REALTIME_FACE_RECOG, REALTIME_FACE_ADDON]
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -48,6 +49,8 @@ extension VisionDemosViewController {
             self.performSegue(withIdentifier: "showFaceRecogDemo", sender: self)
         case FACE_LANDMARKS:
             self.performSegue(withIdentifier: "showFaceLandmarks", sender: self)
+        case BARCODE_READ:
+            self.performSegue(withIdentifier: "showBarcodeDemo", sender: self)
         default:
             print("Test**********")
             break;
