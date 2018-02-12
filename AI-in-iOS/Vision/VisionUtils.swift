@@ -10,7 +10,6 @@ import Vision
 import UIKit
 
 struct VisionUtils {
-    
     static func detectImage(detectType:String, image:UIImage, completion:@escaping ([NSValue]) -> Void){
         var imageDetectRequest:VNImageBasedRequest!
         switch detectType {
@@ -66,6 +65,7 @@ struct VisionUtils {
     }
 }
 
+//MARK: barcode reading
 extension VisionUtils {
     
     static func detectBarcode(image:UIImage, completion:@escaping (String) -> Void){
