@@ -53,11 +53,13 @@ struct VisionUtils {
             guard let observations = request.results as? [VNFaceObservation] else {
                 fatalError("The Face detect results is not match!")
             }
-            var faceLandmarks:[NSValue] = [];
+            let faceLandmarks = NSObject();
             for face in  observations {
                 let landMarks = face.landmarks
                 for (name,value) in Mirror(reflecting: landMarks!).children {
-                    if (name != "allppoints") {}
+                    if (name != "allppoints") {
+                        faceLandmarks.setValue(value, forKey: name!)
+                    }
                 }
             }
         })
