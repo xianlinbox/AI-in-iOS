@@ -6,9 +6,15 @@
 //  Copyright © 2018 Xianning Liu . All rights reserved.
 //
 import UIKit
+import Vision
 
 class FaceLandmarksDemoViewController: FaceRecognisationDemoViewController {
-    
+ 
+    override func performAnalysis() {
+        VisionUtils.detectImage(detectType: FACE_LANDMARKS, image: self.imageView.image!, completion: { (result) in
+            
+        })
+    }
 }
 
 

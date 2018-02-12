@@ -46,6 +46,8 @@ extension VisionDemosViewController {
         switch demos[indexPath.row] {
         case FACE_RECOG:
             self.performSegue(withIdentifier: "showFaceRecogDemo", sender: self)
+        case FACE_LANDMARKS:
+            self.performSegue(withIdentifier: "showFaceLandmarks", sender: self)
         default:
             print("Test**********")
             break;

@@ -27,6 +27,14 @@ class FaceRecognisationDemoViewController: UIViewController,UIImagePickerControl
         self.view.addSubview(changeButton)
     }
     
+    func performAnalysis() {
+        VisionUtils.detectImage(detectType:FACE_RECOG, image: self.imageView.image!) { (faceMarks) in
+            for mark in faceMarks {
+                self.imageView.addSubview(self.createBoxView(frame: self.scaleFrame(mark.cgRectValue)))
+            }
+        }
+    }
+    
     func reloadImage(newImage:UIImage?){
         let imageToDetect = newImage ?? UIImage(named: "twer")
         if let image = imageToDetect {
@@ -34,11 +42,7 @@ class FaceRecognisationDemoViewController: UIViewController,UIImagePickerControl
             self.updateImageView(image)
         }
         DispatchQueue.main.async {
-            VisionUtils.detectImage(image: self.imageView.image!) { (faceMarks) in
-                for mark in faceMarks {
-                    self.imageView.addSubview(self.createBoxView(frame: self.scaleFrame(mark.cgRectValue)))
-                }
-            }
+            self.performAnalysis()
         }
     }
     @objc func pickImageFromLib() {
