@@ -32,8 +32,6 @@
 		DFF730BB2033476C00C9B44F /* CoreMLUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF730BA2033476C00C9B44F /* CoreMLUtils.swift */; };
 		DFF730BC2033476C00C9B44F /* CoreMLUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF730BA2033476C00C9B44F /* CoreMLUtils.swift */; };
 		DFF730BF2033480C00C9B44F /* CoreMLUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF730BE2033480C00C9B44F /* CoreMLUtilsTests.swift */; };
-		DFF730C2203382BA00C9B44F /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFF730C0203382B900C9B44F /* GoogLeNetPlaces.mlmodel */; };
-		DFF730C3203382BA00C9B44F /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFF730C0203382B900C9B44F /* GoogLeNetPlaces.mlmodel */; };
 		DFF730C4203382BA00C9B44F /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFF730C1203382BA00C9B44F /* SqueezeNet.mlmodel */; };
 		DFF730C5203382BA00C9B44F /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFF730C1203382BA00C9B44F /* SqueezeNet.mlmodel */; };
 /* End PBXBuildFile section */
@@ -76,7 +74,6 @@
 		DFF730B7203346D700C9B44F /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		DFF730BA2033476C00C9B44F /* CoreMLUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLUtils.swift; sourceTree = "<group>"; };
 		DFF730BE2033480C00C9B44F /* CoreMLUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLUtilsTests.swift; sourceTree = "<group>"; };
-		DFF730C0203382B900C9B44F /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 		DFF730C1203382BA00C9B44F /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		F77A30170845CF53958F5621 /* Pods-AI-in-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-in-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AI-in-iOS/Pods-AI-in-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		FC983ABCB2A0737316CB9E45 /* Pods_AI_in_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AI_in_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +192,6 @@
 		DFF730B6203344E300C9B44F /* CoreML */ = {
 			isa = PBXGroup;
 			children = (
-				DFF730C0203382B900C9B44F /* GoogLeNetPlaces.mlmodel */,
 				DFF730C1203382BA00C9B44F /* SqueezeNet.mlmodel */,
 				DFF730B7203346D700C9B44F /* MobileNet.mlmodel */,
 				DFF730BA2033476C00C9B44F /* CoreMLUtils.swift */,
@@ -427,7 +423,6 @@
 			files = (
 				DFAFCAFC2032006A00556F68 /* BarcodeReadingViewController.swift in Sources */,
 				DFEE3E272028054400A17295 /* FaceRecognisationDemoViewController.swift in Sources */,
-				DFF730C2203382BA00C9B44F /* GoogLeNetPlaces.mlmodel in Sources */,
 				DFF730C4203382BA00C9B44F /* SqueezeNet.mlmodel in Sources */,
 				DFAFCAFA2031FE5000556F68 /* ImageAnalysisBaseViewController.swift in Sources */,
 				DFF730BB2033476C00C9B44F /* CoreMLUtils.swift in Sources */,
@@ -450,7 +445,6 @@
 				DFF730C5203382BA00C9B44F /* SqueezeNet.mlmodel in Sources */,
 				DFF730B9203346D700C9B44F /* MobileNet.mlmodel in Sources */,
 				DFE3074D2032330300A604FC /* VisionUtilsTests.swift in Sources */,
-				DFF730C3203382BA00C9B44F /* GoogLeNetPlaces.mlmodel in Sources */,
 				DFF730BF2033480C00C9B44F /* CoreMLUtilsTests.swift in Sources */,
 				DFF730BC2033476C00C9B44F /* CoreMLUtils.swift in Sources */,
 				DFAFCB0120321FB300556F68 /* VisionDemosViewController.swift in Sources */,
