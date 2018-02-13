@@ -26,6 +26,7 @@
 		DFE3074D2032330300A604FC /* VisionUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3074C2032330300A604FC /* VisionUtilsTests.swift */; };
 		DFEE3E242027695500A17295 /* VisionDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE3E232027695500A17295 /* VisionDemosViewController.swift */; };
 		DFEE3E272028054400A17295 /* FaceRecognisationDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE3E262028054400A17295 /* FaceRecognisationDemoViewController.swift */; };
+		DFF730B52033428B00C9B44F /* ClassificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF730B42033428B00C9B44F /* ClassificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		DFE3074C2032330300A604FC /* VisionUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionUtilsTests.swift; sourceTree = "<group>"; };
 		DFEE3E232027695500A17295 /* VisionDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionDemosViewController.swift; sourceTree = "<group>"; };
 		DFEE3E262028054400A17295 /* FaceRecognisationDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognisationDemoViewController.swift; sourceTree = "<group>"; };
+		DFF730B42033428B00C9B44F /* ClassificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationViewController.swift; sourceTree = "<group>"; };
 		F77A30170845CF53958F5621 /* Pods-AI-in-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-in-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AI-in-iOS/Pods-AI-in-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		FC983ABCB2A0737316CB9E45 /* Pods_AI_in_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AI_in_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 				DF78007A202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift */,
 				DFAFCAF92031FE5000556F68 /* ImageAnalysisBaseViewController.swift */,
 				DFAFCAFB2032006A00556F68 /* BarcodeReadingViewController.swift */,
+				DFF730B42033428B00C9B44F /* ClassificationViewController.swift */,
 			);
 			path = Vision;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				DFABB7382024CD770074C3E1 /* HomeViewController.swift in Sources */,
 				DF78007B202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift in Sources */,
 				DFABB7362024CD770074C3E1 /* AppDelegate.swift in Sources */,
+				DFF730B52033428B00C9B44F /* ClassificationViewController.swift in Sources */,
 				DF78007D202D0FF500AB64AF /* ApplicationConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,7 +20,6 @@ struct VisionUtils {
         default:
             break
         }
-        
         do {
             let ciImage = CIImage(image: image)
             try VNImageRequestHandler(ciImage: ciImage!, options:[:]).perform([imageDetectRequest])
