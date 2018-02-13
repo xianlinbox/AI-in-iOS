@@ -17,6 +17,14 @@ class ClassificationViewController: ImageAnalysisBaseViewController {
     }
     
     override func performAnalysis() {
+        CoreMLUtils.detectImage(image: self.imageView.image!) { (results) in
+            var text = "";
+            let top3 = results[0...2]
+            for result in top3 {
+                text = text + String(format:"%.2f", result.confidence * 100) + "% : " + result.identifier + "\n"
+            }
+            self.textView.text = text
+        }
     }
     
     private func addTextArea() {
