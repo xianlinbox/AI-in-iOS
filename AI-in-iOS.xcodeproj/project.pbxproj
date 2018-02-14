@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5359084F81E950CD463BFAC8 /* Pods_AI_in_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC983ABCB2A0737316CB9E45 /* Pods_AI_in_iOS.framework */; };
 		D8C9B4DD20EF0097F4D1D780 /* Pods_AI_in_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4704F546A22B07240255B /* Pods_AI_in_iOSTests.framework */; };
+		DF1E96972034CA4B006E6D83 /* NLPDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E96962034CA4B006E6D83 /* NLPDemoViewController.swift */; };
 		DF78007B202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78007A202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift */; };
 		DF78007D202D0FF500AB64AF /* ApplicationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78007C202D0FF500AB64AF /* ApplicationConstants.swift */; };
 		DFABB7362024CD770074C3E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFABB7352024CD770074C3E1 /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		0221CD186E5D772465061831 /* Pods-AI-in-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-in-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AI-in-iOSTests/Pods-AI-in-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		491FA5CE6E81B7F9DFF04426 /* Pods-AI-in-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-in-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AI-in-iOS/Pods-AI-in-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D3C4704F546A22B07240255B /* Pods_AI_in_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AI_in_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF1E96962034CA4B006E6D83 /* NLPDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPDemoViewController.swift; sourceTree = "<group>"; };
 		DF78007A202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLandmarksDemoViewController.swift; sourceTree = "<group>"; };
 		DF78007C202D0FF500AB64AF /* ApplicationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConstants.swift; sourceTree = "<group>"; };
 		DFABB7322024CD770074C3E1 /* AI-in-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI-in-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +121,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DF1E96952034C9DC006E6D83 /* NLP */ = {
+			isa = PBXGroup;
+			children = (
+				DF1E96962034CA4B006E6D83 /* NLPDemoViewController.swift */,
+			);
+			path = NLP;
+			sourceTree = "<group>";
+		};
 		DFABB7292024CD770074C3E1 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 		DFABB7342024CD770074C3E1 /* AI-in-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				DF1E96952034C9DC006E6D83 /* NLP */,
 				DFF730B6203344E300C9B44F /* CoreML */,
 				DFEE3E252028051100A17295 /* Vision */,
 				DFABB7352024CD770074C3E1 /* AppDelegate.swift */,
@@ -433,6 +444,7 @@
 				DFABB7362024CD770074C3E1 /* AppDelegate.swift in Sources */,
 				DFF730B8203346D700C9B44F /* MobileNet.mlmodel in Sources */,
 				DFF730B52033428B00C9B44F /* ClassificationViewController.swift in Sources */,
+				DF1E96972034CA4B006E6D83 /* NLPDemoViewController.swift in Sources */,
 				DF78007D202D0FF500AB64AF /* ApplicationConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

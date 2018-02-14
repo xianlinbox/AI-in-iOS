@@ -36,6 +36,7 @@
                     <navigationItem key="navigationItem" title="Menu View Controller" id="AKU-Ds-XlG"/>
                     <connections>
                         <segue destination="0LZ-zn-As4" kind="show" identifier="showVisionDemos" id="7rD-81-YA9"/>
+                        <segue destination="7qq-U4-Bls" kind="show" identifier="showNLPDemo" id="iuQ-B2-Js2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhq-lD-RsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -92,6 +93,21 @@
             </objects>
             <point key="canvasLocation" x="334" y="-434"/>
         </scene>
+        <!--Demo View Controller-->
+        <scene sceneID="tE2-hU-wcc">
+            <objects>
+                <viewController id="7qq-U4-Bls" customClass="NLPDemoViewController" customModule="AI_in_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bod-8j-mUH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Rp6-qF-EYj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckt-8o-Ztu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="310"/>
+        </scene>
         <!--Face Landmarks Demo View Controller-->
         <scene sceneID="22a-cx-lF9">
             <objects>
@@ -120,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVk-rk-R5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="-340"/>
+            <point key="canvasLocation" x="1614" y="-531"/>
         </scene>
         <!--Classification View Controller-->
         <scene sceneID="gMC-gT-vzO">
@@ -135,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVu-bX-ijD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="489"/>
+            <point key="canvasLocation" x="1929" y="152"/>
         </scene>
         <!--Face Recognisation Demo View Controller-->
         <scene sceneID="vVw-d1-VRF">

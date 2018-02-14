@@ -45,9 +45,8 @@ extension HomeViewController {
         switch menu[indexPath.row] {
         case VISION:
             self.performSegue(withIdentifier: "showVisionDemos", sender: self)
-            break
         case NLP:
-            break
+            self.performSegue(withIdentifier: "showNLPDemo", sender: self)
         case INDUSTRY:
             break
         default:
