@@ -106,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckt-8o-Ztu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284" y="310"/>
+            <point key="canvasLocation" x="284" y="309.89505247376314"/>
         </scene>
         <!--Face Landmarks Demo View Controller-->
         <scene sceneID="22a-cx-lF9">

@@ -12,6 +12,9 @@
 		DF1E96972034CA4B006E6D83 /* NLPDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E96962034CA4B006E6D83 /* NLPDemoViewController.swift */; };
 		DF78007B202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78007A202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift */; };
 		DF78007D202D0FF500AB64AF /* ApplicationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78007C202D0FF500AB64AF /* ApplicationConstants.swift */; };
+		DFA3E547203635B100891674 /* NLPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA3E546203635B100891674 /* NLPUtils.swift */; };
+		DFA3E548203635B100891674 /* NLPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA3E546203635B100891674 /* NLPUtils.swift */; };
+		DFA3E54E20363A5700891674 /* NLPUtilsSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA3E54D20363A5700891674 /* NLPUtilsSpecs.swift */; };
 		DFABB7362024CD770074C3E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFABB7352024CD770074C3E1 /* AppDelegate.swift */; };
 		DFABB7382024CD770074C3E1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFABB7372024CD770074C3E1 /* HomeViewController.swift */; };
 		DFABB73B2024CD770074C3E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFABB7392024CD770074C3E1 /* Main.storyboard */; };
@@ -24,7 +27,7 @@
 		DFAFCB0120321FB300556F68 /* VisionDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE3E232027695500A17295 /* VisionDemosViewController.swift */; };
 		DFB489222028F402003FE79B /* VisionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB489212028F402003FE79B /* VisionUtils.swift */; };
 		DFDF749B2032342A00FC8163 /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFDF749A2032342A00FC8163 /* TestAssets.xcassets */; };
-		DFE3074D2032330300A604FC /* VisionUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3074C2032330300A604FC /* VisionUtilsTests.swift */; };
+		DFE3074D2032330300A604FC /* VisionUtilsSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3074C2032330300A604FC /* VisionUtilsSpecs.swift */; };
 		DFEE3E242027695500A17295 /* VisionDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE3E232027695500A17295 /* VisionDemosViewController.swift */; };
 		DFEE3E272028054400A17295 /* FaceRecognisationDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE3E262028054400A17295 /* FaceRecognisationDemoViewController.swift */; };
 		DFF730B52033428B00C9B44F /* ClassificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF730B42033428B00C9B44F /* ClassificationViewController.swift */; };
@@ -32,7 +35,7 @@
 		DFF730B9203346D700C9B44F /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFF730B7203346D700C9B44F /* MobileNet.mlmodel */; };
 		DFF730BB2033476C00C9B44F /* CoreMLUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF730BA2033476C00C9B44F /* CoreMLUtils.swift */; };
 		DFF730BC2033476C00C9B44F /* CoreMLUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF730BA2033476C00C9B44F /* CoreMLUtils.swift */; };
-		DFF730BF2033480C00C9B44F /* CoreMLUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF730BE2033480C00C9B44F /* CoreMLUtilsTests.swift */; };
+		DFF730BF2033480C00C9B44F /* CoreMLUtilsSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF730BE2033480C00C9B44F /* CoreMLUtilsSpecs.swift */; };
 		DFF730C4203382BA00C9B44F /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFF730C1203382BA00C9B44F /* SqueezeNet.mlmodel */; };
 		DFF730C5203382BA00C9B44F /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFF730C1203382BA00C9B44F /* SqueezeNet.mlmodel */; };
 /* End PBXBuildFile section */
@@ -55,6 +58,8 @@
 		DF1E96962034CA4B006E6D83 /* NLPDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPDemoViewController.swift; sourceTree = "<group>"; };
 		DF78007A202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLandmarksDemoViewController.swift; sourceTree = "<group>"; };
 		DF78007C202D0FF500AB64AF /* ApplicationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConstants.swift; sourceTree = "<group>"; };
+		DFA3E546203635B100891674 /* NLPUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPUtils.swift; sourceTree = "<group>"; };
+		DFA3E54D20363A5700891674 /* NLPUtilsSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPUtilsSpecs.swift; sourceTree = "<group>"; };
 		DFABB7322024CD770074C3E1 /* AI-in-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI-in-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFABB7352024CD770074C3E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFABB7372024CD770074C3E1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -69,13 +74,13 @@
 		DFAFCAFB2032006A00556F68 /* BarcodeReadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReadingViewController.swift; sourceTree = "<group>"; };
 		DFB489212028F402003FE79B /* VisionUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionUtils.swift; sourceTree = "<group>"; };
 		DFDF749A2032342A00FC8163 /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
-		DFE3074C2032330300A604FC /* VisionUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionUtilsTests.swift; sourceTree = "<group>"; };
+		DFE3074C2032330300A604FC /* VisionUtilsSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionUtilsSpecs.swift; sourceTree = "<group>"; };
 		DFEE3E232027695500A17295 /* VisionDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionDemosViewController.swift; sourceTree = "<group>"; };
 		DFEE3E262028054400A17295 /* FaceRecognisationDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognisationDemoViewController.swift; sourceTree = "<group>"; };
 		DFF730B42033428B00C9B44F /* ClassificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationViewController.swift; sourceTree = "<group>"; };
 		DFF730B7203346D700C9B44F /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		DFF730BA2033476C00C9B44F /* CoreMLUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLUtils.swift; sourceTree = "<group>"; };
-		DFF730BE2033480C00C9B44F /* CoreMLUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLUtilsTests.swift; sourceTree = "<group>"; };
+		DFF730BE2033480C00C9B44F /* CoreMLUtilsSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLUtilsSpecs.swift; sourceTree = "<group>"; };
 		DFF730C1203382BA00C9B44F /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		F77A30170845CF53958F5621 /* Pods-AI-in-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-in-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AI-in-iOS/Pods-AI-in-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		FC983ABCB2A0737316CB9E45 /* Pods_AI_in_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AI_in_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +130,15 @@
 			isa = PBXGroup;
 			children = (
 				DF1E96962034CA4B006E6D83 /* NLPDemoViewController.swift */,
+				DFA3E546203635B100891674 /* NLPUtils.swift */,
+			);
+			path = NLP;
+			sourceTree = "<group>";
+		};
+		DFA3E5492036372600891674 /* NLP */ = {
+			isa = PBXGroup;
+			children = (
+				DFA3E54D20363A5700891674 /* NLPUtilsSpecs.swift */,
 			);
 			path = NLP;
 			sourceTree = "<group>";
@@ -169,6 +183,7 @@
 		DFABB7492024CD770074C3E1 /* AI-in-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				DFA3E5492036372600891674 /* NLP */,
 				DFF730BD203347F400C9B44F /* CoreML */,
 				DFE3074B203232EA00A604FC /* Vision */,
 				DFABB74A2024CD770074C3E1 /* AI_in_iOSTests.swift */,
@@ -181,7 +196,7 @@
 		DFE3074B203232EA00A604FC /* Vision */ = {
 			isa = PBXGroup;
 			children = (
-				DFE3074C2032330300A604FC /* VisionUtilsTests.swift */,
+				DFE3074C2032330300A604FC /* VisionUtilsSpecs.swift */,
 			);
 			path = Vision;
 			sourceTree = "<group>";
@@ -213,7 +228,7 @@
 		DFF730BD203347F400C9B44F /* CoreML */ = {
 			isa = PBXGroup;
 			children = (
-				DFF730BE2033480C00C9B44F /* CoreMLUtilsTests.swift */,
+				DFF730BE2033480C00C9B44F /* CoreMLUtilsSpecs.swift */,
 			);
 			path = CoreML;
 			sourceTree = "<group>";
@@ -435,6 +450,7 @@
 				DFAFCAFC2032006A00556F68 /* BarcodeReadingViewController.swift in Sources */,
 				DFEE3E272028054400A17295 /* FaceRecognisationDemoViewController.swift in Sources */,
 				DFF730C4203382BA00C9B44F /* SqueezeNet.mlmodel in Sources */,
+				DFA3E547203635B100891674 /* NLPUtils.swift in Sources */,
 				DFAFCAFA2031FE5000556F68 /* ImageAnalysisBaseViewController.swift in Sources */,
 				DFF730BB2033476C00C9B44F /* CoreMLUtils.swift in Sources */,
 				DFB489222028F402003FE79B /* VisionUtils.swift in Sources */,
@@ -453,11 +469,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA3E548203635B100891674 /* NLPUtils.swift in Sources */,
+				DFA3E54E20363A5700891674 /* NLPUtilsSpecs.swift in Sources */,
 				DFABB74B2024CD770074C3E1 /* AI_in_iOSTests.swift in Sources */,
 				DFF730C5203382BA00C9B44F /* SqueezeNet.mlmodel in Sources */,
 				DFF730B9203346D700C9B44F /* MobileNet.mlmodel in Sources */,
-				DFE3074D2032330300A604FC /* VisionUtilsTests.swift in Sources */,
-				DFF730BF2033480C00C9B44F /* CoreMLUtilsTests.swift in Sources */,
+				DFE3074D2032330300A604FC /* VisionUtilsSpecs.swift in Sources */,
+				DFF730BF2033480C00C9B44F /* CoreMLUtilsSpecs.swift in Sources */,
 				DFF730BC2033476C00C9B44F /* CoreMLUtils.swift in Sources */,
 				DFAFCB0120321FB300556F68 /* VisionDemosViewController.swift in Sources */,
 				DFAFCB00203212CC00556F68 /* VisionUtils.swift in Sources */,
