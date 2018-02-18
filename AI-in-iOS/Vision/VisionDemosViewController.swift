@@ -51,7 +51,7 @@ extension VisionDemosViewController {
             self.performSegue(withIdentifier: "showBarcodeDemo", sender: self)
         case SPEC_RECOG:
             self.performSegue(withIdentifier: "showClassification", sender: self)
-        case FREALTIME_FACE_ADDONA:
+        case REALTIME_FACE_ADDON:
             self.performSegue(withIdentifier: "showDynamicTrack", sender: self)
         default:
             print("Test**********")
