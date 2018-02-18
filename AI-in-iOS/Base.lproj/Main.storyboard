@@ -162,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="1929" y="152"/>
         </scene>
-        <!--Dynamic Track View Controller-->
+        <!--Realtime Addon View Controller-->
         <scene sceneID="tX1-en-MYn">
             <objects>
-                <viewController id="9t0-BX-sOW" customClass="DynamicTrackViewController" customModule="AI_in_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9t0-BX-sOW" customClass="RealtimeAddonViewController" customModule="AI_in_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mV2-IE-VWU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
