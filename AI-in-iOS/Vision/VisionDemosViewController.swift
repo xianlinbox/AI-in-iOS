@@ -11,11 +11,10 @@ let FACE_RECOG = "Face Recoginisation"
 let FACE_LANDMARKS = "Face Landmarks"
 let BARCODE_READ = "Barcode Reading"
 let SPEC_RECOG = "Classification"
-let REALTIME_FACE_RECOG = "Realtime Face Recoginisation"
 let REALTIME_FACE_ADDON = "Realtime Face Add-on"
 
 class VisionDemosViewController: UITableViewController {
-    let demos:[String] = [FACE_RECOG, FACE_LANDMARKS, BARCODE_READ, SPEC_RECOG, REALTIME_FACE_RECOG, REALTIME_FACE_ADDON]
+    let demos:[String] = [FACE_RECOG, FACE_LANDMARKS, BARCODE_READ, SPEC_RECOG, REALTIME_FACE_ADDON]
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -51,7 +50,9 @@ extension VisionDemosViewController {
         case BARCODE_READ:
             self.performSegue(withIdentifier: "showBarcodeDemo", sender: self)
         case SPEC_RECOG:
-            self.performSegue(withIdentifier: "showClassification", sender: self)            
+            self.performSegue(withIdentifier: "showClassification", sender: self)
+        case FREALTIME_FACE_ADDONA:
+            self.performSegue(withIdentifier: "showDynamicTrack", sender: self)
         default:
             print("Test**********")
             break;

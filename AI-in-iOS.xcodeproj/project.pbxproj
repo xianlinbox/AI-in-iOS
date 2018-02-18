@@ -12,6 +12,7 @@
 		DF1E96972034CA4B006E6D83 /* NLPDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E96962034CA4B006E6D83 /* NLPDemoViewController.swift */; };
 		DF78007B202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78007A202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift */; };
 		DF78007D202D0FF500AB64AF /* ApplicationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78007C202D0FF500AB64AF /* ApplicationConstants.swift */; };
+		DF7B158D2039314A006D0018 /* DynamicTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B158C2039314A006D0018 /* DynamicTrackViewController.swift */; };
 		DFA3E547203635B100891674 /* NLPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA3E546203635B100891674 /* NLPUtils.swift */; };
 		DFA3E548203635B100891674 /* NLPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA3E546203635B100891674 /* NLPUtils.swift */; };
 		DFA3E54E20363A5700891674 /* NLPUtilsSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA3E54D20363A5700891674 /* NLPUtilsSpecs.swift */; };
@@ -58,6 +59,7 @@
 		DF1E96962034CA4B006E6D83 /* NLPDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPDemoViewController.swift; sourceTree = "<group>"; };
 		DF78007A202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLandmarksDemoViewController.swift; sourceTree = "<group>"; };
 		DF78007C202D0FF500AB64AF /* ApplicationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConstants.swift; sourceTree = "<group>"; };
+		DF7B158C2039314A006D0018 /* DynamicTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTrackViewController.swift; sourceTree = "<group>"; };
 		DFA3E546203635B100891674 /* NLPUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPUtils.swift; sourceTree = "<group>"; };
 		DFA3E54D20363A5700891674 /* NLPUtilsSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPUtilsSpecs.swift; sourceTree = "<group>"; };
 		DFABB7322024CD770074C3E1 /* AI-in-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI-in-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +213,7 @@
 				DFAFCAF92031FE5000556F68 /* ImageAnalysisBaseViewController.swift */,
 				DFAFCAFB2032006A00556F68 /* BarcodeReadingViewController.swift */,
 				DFF730B42033428B00C9B44F /* ClassificationViewController.swift */,
+				DF7B158C2039314A006D0018 /* DynamicTrackViewController.swift */,
 			);
 			path = Vision;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				DFF730BB2033476C00C9B44F /* CoreMLUtils.swift in Sources */,
 				DFB489222028F402003FE79B /* VisionUtils.swift in Sources */,
 				DFEE3E242027695500A17295 /* VisionDemosViewController.swift in Sources */,
+				DF7B158D2039314A006D0018 /* DynamicTrackViewController.swift in Sources */,
 				DFABB7382024CD770074C3E1 /* HomeViewController.swift in Sources */,
 				DF78007B202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift in Sources */,
 				DFABB7362024CD770074C3E1 /* AppDelegate.swift in Sources */,
