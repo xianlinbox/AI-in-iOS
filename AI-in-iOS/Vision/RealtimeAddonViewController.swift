@@ -8,7 +8,7 @@
 
 import UIKit
 import AVKit
-class RealtimeAddonViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class RealtimeAddonViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     var session:AVCaptureSession!
     var previewLayer:AVCaptureVideoPreviewLayer!
     
@@ -46,14 +46,20 @@ class RealtimeAddonViewController: UIViewController, AVCaptureMetadataOutputObje
             fatalError(error.localizedDescription)
         }
         
-        let deviceOutput = AVCaptureMetadataOutput()
-        deviceOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+        let deviceOutput = AVCaptureVideoDataOutput()
+        deviceOutput.setSampleBufferDelegate(self, queue: DispatchQueue.main)
         session.addOutput(deviceOutput)
-       
+        
         previewLayer = AVCaptureVideoPreviewLayer(session: session)
         self.view.layer.addSublayer(previewLayer)
         self.session.startRunning()
     }
-    
+}
+
+//MARK: AVCaptureVideoDataOutputSampleBufferDelegate
+extension RealtimeAddonViewController {
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection){
+        
+    }
 }
 
