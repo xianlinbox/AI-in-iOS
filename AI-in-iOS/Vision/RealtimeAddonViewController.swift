@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import Vision
 class RealtimeAddonViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     var session:AVCaptureSession!
     var previewLayer:AVCaptureVideoPreviewLayer!
@@ -59,7 +60,14 @@ class RealtimeAddonViewController: UIViewController, AVCaptureVideoDataOutputSam
 //MARK: AVCaptureVideoDataOutputSampleBufferDelegate
 extension RealtimeAddonViewController {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection){
-        
+        let cvPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
+        let requestHandler = VNImageRequestHandler(cvPixelBuffer: cvPixelBuffer!, options: [:])
+        let faceDetectReq = VNDetectFaceRectanglesRequest()
+        do {
+            try requestHandler.perform([faceDetectReq])
+        }catch{
+            fatalError(error.localizedDescription)
+        }
     }
 }
 
