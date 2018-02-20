@@ -26,7 +26,7 @@ class RealtimeAddonViewController: UIViewController, AVCaptureVideoDataOutputSam
              .restricted:
             showWarningMessage()
         default:
-            showWarningMessage()
+            initCapture()
         }
     }
     
@@ -70,14 +70,21 @@ extension RealtimeAddonViewController {
         }
         
         if let results = faceDetectReq.results as? [VNFaceObservation] {
-            handleFaceDetectResults(results)
+            DispatchQueue.main.async {
+                self.handleFaceDetectResults(results)
+            }
         }
     }
     
     private func handleFaceDetectResults(_ result:[VNFaceObservation]) {
         for observation in result {
-         let ratioRect = observation.boundingBox
-            
+            let ratioRect = observation.boundingBox
+            let realRect = ViewUtils.scaleFrame(ratioRect, self.view.bounds)
+            let hatY = realRect.origin.y - realRect.size.height
+            let hatRect = CGRect(origin: CGPoint(x: realRect.origin.x, y: hatY), size: realRect.size)
+            let hatImageView = UIImageView(image: UIImage(named: "hat"))
+            hatImageView.frame = hatRect
+            self.view.addSubview(hatImageView)
         }
     }
 }
