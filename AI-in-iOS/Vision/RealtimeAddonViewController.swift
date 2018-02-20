@@ -68,6 +68,17 @@ extension RealtimeAddonViewController {
         }catch{
             fatalError(error.localizedDescription)
         }
+        
+        if let results = faceDetectReq.results as? [VNFaceObservation] {
+            handleFaceDetectResults(results)
+        }
+    }
+    
+    private func handleFaceDetectResults(_ result:[VNFaceObservation]) {
+        for observation in result {
+         let ratioRect = observation.boundingBox
+            
+        }
     }
 }
 

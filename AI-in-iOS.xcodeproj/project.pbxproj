@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5359084F81E950CD463BFAC8 /* Pods_AI_in_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC983ABCB2A0737316CB9E45 /* Pods_AI_in_iOS.framework */; };
 		D8C9B4DD20EF0097F4D1D780 /* Pods_AI_in_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C4704F546A22B07240255B /* Pods_AI_in_iOSTests.framework */; };
+		DF1602B6203CAEED0052216D /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1602B5203CAEED0052216D /* ViewUtils.swift */; };
 		DF1E96972034CA4B006E6D83 /* NLPDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E96962034CA4B006E6D83 /* NLPDemoViewController.swift */; };
 		DF78007B202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78007A202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift */; };
 		DF78007D202D0FF500AB64AF /* ApplicationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78007C202D0FF500AB64AF /* ApplicationConstants.swift */; };
@@ -56,6 +57,7 @@
 		0221CD186E5D772465061831 /* Pods-AI-in-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-in-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AI-in-iOSTests/Pods-AI-in-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		491FA5CE6E81B7F9DFF04426 /* Pods-AI-in-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-in-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AI-in-iOS/Pods-AI-in-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D3C4704F546A22B07240255B /* Pods_AI_in_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AI_in_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF1602B5203CAEED0052216D /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		DF1E96962034CA4B006E6D83 /* NLPDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPDemoViewController.swift; sourceTree = "<group>"; };
 		DF78007A202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLandmarksDemoViewController.swift; sourceTree = "<group>"; };
 		DF78007C202D0FF500AB64AF /* ApplicationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConstants.swift; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DF1602B7203CAEF80052216D /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				DF1602B5203CAEED0052216D /* ViewUtils.swift */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 		DF1E96952034C9DC006E6D83 /* NLP */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +188,7 @@
 				DFABB73E2024CD770074C3E1 /* LaunchScreen.storyboard */,
 				DFABB7412024CD770074C3E1 /* Info.plist */,
 				DF78007C202D0FF500AB64AF /* ApplicationConstants.swift */,
+				DF1602B7203CAEF80052216D /* Share */,
 			);
 			path = "AI-in-iOS";
 			sourceTree = "<group>";
@@ -466,6 +477,7 @@
 				DFF730B52033428B00C9B44F /* ClassificationViewController.swift in Sources */,
 				DF1E96972034CA4B006E6D83 /* NLPDemoViewController.swift in Sources */,
 				DF78007D202D0FF500AB64AF /* ApplicationConstants.swift in Sources */,
+				DF1602B6203CAEED0052216D /* ViewUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
