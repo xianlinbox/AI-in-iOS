@@ -77,7 +77,7 @@ extension RealtimeAddonViewController {
     }
     
     private func handleFaceDetectResults(_ result:[VNFaceObservation]) {
-        
+        ViewUtils.clearOldSubViews(view: self.view)
         for observation in result {
             let ratioRect = observation.boundingBox
             let realRect = ViewUtils.scaleFrame(ratioRect, self.view.bounds)
