@@ -15,4 +15,12 @@ struct ViewUtils {
         let translate = CGAffineTransform.identity.scaledBy(x: imageFrameSize.width, y: imageFrameSize.height)
         return originFrame.applying(translate).applying(transform)
     }
+    
+    static func clearOldSubViews(view:UIView?) {
+        if let subViews = view?.subviews {
+            for subView in subViews {
+                subView.removeFromSuperview()
+            }
+        }
+    }
 }

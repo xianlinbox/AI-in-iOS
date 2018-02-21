@@ -36,7 +36,7 @@ class ImageAnalysisBaseViewController: UIViewController,UIImagePickerControllerD
     func reloadImage(newImage:UIImage?){
         let imageToDetect = newImage ?? UIImage(named: "twer")
         if let image = imageToDetect {
-            self.clearOldSubViews();
+            ViewUtils.clearOldSubViews(view: self.imageView)
             self.updateImageView(image)
         }
         DispatchQueue.main.async {
@@ -92,16 +92,9 @@ extension ImageAnalysisBaseViewController {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    private func clearOldSubViews() {
-        let subViews = self.imageView?.subviews ?? []
-        for subView in subViews {
-            subView.removeFromSuperview()
-        }
-        self.imageView?.removeFromSuperview()
-    }
-    
+        
     fileprivate func updateImageView(_ newImage: UIImage) {
+        self.imageView?.removeFromSuperview()
         let ratio = newImage.size.height/newImage.size.width
         self.imageView = UIImageView(frame: CGRect(x: 0, y: 100, width: self.view.frame.size.width, height: self.view.frame.size.width * ratio))
         self.imageView.image = newImage

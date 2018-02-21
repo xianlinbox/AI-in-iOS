@@ -77,6 +77,7 @@ extension RealtimeAddonViewController {
     }
     
     private func handleFaceDetectResults(_ result:[VNFaceObservation]) {
+        
         for observation in result {
             let ratioRect = observation.boundingBox
             let realRect = ViewUtils.scaleFrame(ratioRect, self.view.bounds)
