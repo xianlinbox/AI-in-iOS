@@ -9,11 +9,12 @@
 import UIKit
 
 let VISION = "Vision Demos"
-let NLP = "NLP Demos"
-let INDUSTRY = "Industry Examples"
+let NLP = "NLP Demo"
+let OCR = "OCR Demo"
+let AI_VR = "AI/AR Demo"
 
 class HomeViewController: UITableViewController {
-    let menu:[String] = [VISION, NLP, INDUSTRY]
+    let menu:[String] = [VISION, NLP, OCR, AI_VR]
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -47,8 +48,8 @@ extension HomeViewController {
             self.performSegue(withIdentifier: "showVisionDemos", sender: self)
         case NLP:
             self.performSegue(withIdentifier: "showNLPDemo", sender: self)
-        case INDUSTRY:
-            break
+        case OCR:
+            self.performSegue(withIdentifier: "showOCR", sender: self)
         default:
             break
         }

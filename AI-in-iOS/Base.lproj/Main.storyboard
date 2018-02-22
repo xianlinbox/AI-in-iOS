@@ -37,6 +37,7 @@
                     <connections>
                         <segue destination="0LZ-zn-As4" kind="show" identifier="showVisionDemos" id="7rD-81-YA9"/>
                         <segue destination="7qq-U4-Bls" kind="show" identifier="showNLPDemo" id="iuQ-B2-Js2"/>
+                        <segue destination="AKK-WU-Bg4" kind="show" identifier="showOCR" id="yKW-bw-vL3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhq-lD-RsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -92,7 +93,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSh-jf-GuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="334" y="-434"/>
+            <point key="canvasLocation" x="332" y="-831"/>
         </scene>
         <!--Demo View Controller-->
         <scene sceneID="tE2-hU-wcc">
@@ -115,7 +116,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckt-8o-Ztu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-831" y="399"/>
+            <point key="canvasLocation" x="332" y="81"/>
+        </scene>
+        <!--Demo View Controller-->
+        <scene sceneID="cE3-F0-G1e">
+            <objects>
+                <viewController id="AKK-WU-Bg4" customClass="OCRDemoViewController" customModule="AI_in_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1mI-FF-zsO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Geh-nw-TXP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yo-ws-mLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="884"/>
         </scene>
         <!--Face Landmarks Demo View Controller-->
         <scene sceneID="22a-cx-lF9">
@@ -130,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4R-Hu-ere" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="-1232"/>
+            <point key="canvasLocation" x="1929" y="-1720"/>
         </scene>
         <!--Barcode Anaylysis View Controller-->
         <scene sceneID="cDt-zg-ROz">
@@ -145,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVk-rk-R5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="-535"/>
+            <point key="canvasLocation" x="1929" y="-1048"/>
         </scene>
         <!--Classification View Controller-->
         <scene sceneID="gMC-gT-vzO">
@@ -160,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVu-bX-ijD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="152"/>
+            <point key="canvasLocation" x="1929" y="-305"/>
         </scene>
         <!--Realtime Addon View Controller-->
         <scene sceneID="tX1-en-MYn">
@@ -175,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHb-PN-CtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="860"/>
+            <point key="canvasLocation" x="1929" y="521"/>
         </scene>
         <!--Face Recognisation Demo View Controller-->
         <scene sceneID="vVw-d1-VRF">
@@ -190,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhE-eh-lcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="-1933"/>
+            <point key="canvasLocation" x="1929" y="-2426"/>
         </scene>
     </scenes>
 </document>

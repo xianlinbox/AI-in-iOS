@@ -40,6 +40,7 @@
 		DFF730BF2033480C00C9B44F /* CoreMLUtilsSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF730BE2033480C00C9B44F /* CoreMLUtilsSpecs.swift */; };
 		DFF730C4203382BA00C9B44F /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFF730C1203382BA00C9B44F /* SqueezeNet.mlmodel */; };
 		DFF730C5203382BA00C9B44F /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFF730C1203382BA00C9B44F /* SqueezeNet.mlmodel */; };
+		DFFDF0B5203F70C600B147C4 /* OCRDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFDF0B4203F70C600B147C4 /* OCRDemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		DFF730BA2033476C00C9B44F /* CoreMLUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLUtils.swift; sourceTree = "<group>"; };
 		DFF730BE2033480C00C9B44F /* CoreMLUtilsSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLUtilsSpecs.swift; sourceTree = "<group>"; };
 		DFF730C1203382BA00C9B44F /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
+		DFFDF0B4203F70C600B147C4 /* OCRDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRDemoViewController.swift; sourceTree = "<group>"; };
 		F77A30170845CF53958F5621 /* Pods-AI-in-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-in-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AI-in-iOS/Pods-AI-in-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		FC983ABCB2A0737316CB9E45 /* Pods_AI_in_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AI_in_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -178,9 +180,11 @@
 		DFABB7342024CD770074C3E1 /* AI-in-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				DFFDF0B3203F705300B147C4 /* OCR */,
 				DF1E96952034C9DC006E6D83 /* NLP */,
 				DFF730B6203344E300C9B44F /* CoreML */,
 				DFEE3E252028051100A17295 /* Vision */,
+				DF1602B7203CAEF80052216D /* Share */,
 				DFABB7352024CD770074C3E1 /* AppDelegate.swift */,
 				DFABB7372024CD770074C3E1 /* HomeViewController.swift */,
 				DFABB7392024CD770074C3E1 /* Main.storyboard */,
@@ -188,7 +192,6 @@
 				DFABB73E2024CD770074C3E1 /* LaunchScreen.storyboard */,
 				DFABB7412024CD770074C3E1 /* Info.plist */,
 				DF78007C202D0FF500AB64AF /* ApplicationConstants.swift */,
-				DF1602B7203CAEF80052216D /* Share */,
 			);
 			path = "AI-in-iOS";
 			sourceTree = "<group>";
@@ -245,6 +248,14 @@
 				DFF730BE2033480C00C9B44F /* CoreMLUtilsSpecs.swift */,
 			);
 			path = CoreML;
+			sourceTree = "<group>";
+		};
+		DFFDF0B3203F705300B147C4 /* OCR */ = {
+			isa = PBXGroup;
+			children = (
+				DFFDF0B4203F70C600B147C4 /* OCRDemoViewController.swift */,
+			);
+			path = OCR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFFDF0B5203F70C600B147C4 /* OCRDemoViewController.swift in Sources */,
 				DFAFCAFC2032006A00556F68 /* BarcodeReadingViewController.swift in Sources */,
 				DFEE3E272028054400A17295 /* FaceRecognisationDemoViewController.swift in Sources */,
 				DFF730C4203382BA00C9B44F /* SqueezeNet.mlmodel in Sources */,
