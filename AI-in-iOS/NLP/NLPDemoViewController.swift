@@ -57,7 +57,7 @@ class NLPDemoViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     fileprivate func addTextArea() {
         self.textView?.removeFromSuperview()
-        textView = UITextView(frame: CGRect(x: 10, y: 10, width: UIConstants.SCREEN_WIDTH - 20, height: 100))
+        textView = UITextView(frame: CGRect(x: 10, y: 100, width: UIConstants.SCREEN_WIDTH - 20, height: 600))
         textView.textColor = UIColor.red
         textView.layer.borderColor = UIColor.black.cgColor
         textView.layer.borderWidth = 1
