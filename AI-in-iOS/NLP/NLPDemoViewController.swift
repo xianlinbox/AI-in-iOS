@@ -10,6 +10,7 @@ import UIKit
 import Speech
 class NLPDemoViewController: UIViewController, SFSpeechRecognizerDelegate {
     var textView:UITextView!
+    var recordButton:UIButton!
     
     lazy var speechRecoginizer:SFSpeechRecognizer? = {
         if let recoginiser = SFSpeechRecognizer(locale: Locale(identifier: "en_US")){
@@ -24,10 +25,34 @@ class NLPDemoViewController: UIViewController, SFSpeechRecognizerDelegate {
     override func viewDidLoad() {
         addTextArea()
         addRecordButton()
+        checkAuthorisationStatus()
     }
     
     @objc func recordButtonTapped(){
         print("record button tapped .........")
+    }
+    
+    fileprivate func checkAuthorisationStatus() {
+        let locales = SFSpeechRecognizer.supportedLocales()
+        print(locales)
+        SFSpeechRecognizer.requestAuthorization { (status:SFSpeechRecognizerAuthorizationStatus) in
+            DispatchQueue.main.async {
+                switch status {
+                case .authorized:
+                    self.recordButton.isEnabled = true
+                case .denied:
+                    self.recordButton.isEnabled = false
+                    self.recordButton.setTitle("User denied access to speech recognition", for: .disabled)
+                case .restricted:
+                    self.recordButton.isEnabled = false
+                    self.recordButton.setTitle("Speech recognition restricted on this device", for: .disabled)
+                case .notDetermined:
+                    self.recordButton.isEnabled = false
+                    self.recordButton.setTitle("Speech recognition not yet authorized", for: .disabled)
+                }
+            }
+        }
+        
     }
     
     fileprivate func addTextArea() {
@@ -40,7 +65,7 @@ class NLPDemoViewController: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     fileprivate func addRecordButton() {
-        let recordButton = UIButton(frame: CGRect(x: UIConstants.SCREEN_WIDTH/2 - 100, y: UIConstants.SCREEN_HEIGHT - 100, width: 200, height: 30))
+        recordButton = UIButton(frame: CGRect(x: UIConstants.SCREEN_WIDTH/2 - 100, y: UIConstants.SCREEN_HEIGHT - 100, width: 200, height: 30))
         recordButton.setTitle("Start voice recording", for: .normal)
         recordButton.backgroundColor=UIColor.blue
         recordButton.addTarget(self, action: #selector(recordButtonTapped), for: .touchUpInside)
