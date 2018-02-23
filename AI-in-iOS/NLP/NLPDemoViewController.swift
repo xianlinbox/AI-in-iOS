@@ -7,14 +7,24 @@
 //
 
 import UIKit
-class NLPDemoViewController: UIViewController {
+import Speech
+class NLPDemoViewController: UIViewController, SFSpeechRecognizerDelegate {
     var textView:UITextView!
+    lazy var speechRecoginizer:SFSpeechRecognizer? = {
+        if let recoginiser = SFSpeechRecognizer(locale: Locale(identifier: "en_US")){
+            recoginiser.delegate = self
+            return recoginiser
+        } else {
+            return nil
+        }
+    }()
     
     override func viewWillAppear(_ animated: Bool) {
         addTextArea();
     }
     
     func performAnalysis(){
+        
     }
     
     private func addTextArea() {
@@ -26,3 +36,9 @@ class NLPDemoViewController: UIViewController {
         self.view.addSubview(textView)
     }
 }
+
+//MARK: SFSpeechRecoginizerDelegate
+extension NLPDemoViewController {
+    
+}
+
