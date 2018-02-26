@@ -8,9 +8,12 @@
 
 import UIKit
 import Speech
-class NLPDemoViewController: UIViewController, SFSpeechRecognizerDelegate {
+class NLPDemoViewController: UIViewController {
     var textView:UITextView!
     var recordButton:UIButton!
+    var localeTextField:UITextField!
+    let supportLocales = Array(SFSpeechRecognizer.supportedLocales())
+    var selectedLocale:Locale?
     
     lazy var speechRecoginizer:SFSpeechRecognizer? = {
         if let recoginiser = SFSpeechRecognizer(locale: Locale(identifier: "en_US")){
@@ -25,6 +28,8 @@ class NLPDemoViewController: UIViewController, SFSpeechRecognizerDelegate {
     override func viewDidLoad() {
         addTextArea()
         addRecordButton()
+        addPickerView()
+        addToolbar()
         checkAuthorisationStatus()
     }
     
@@ -33,8 +38,6 @@ class NLPDemoViewController: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     fileprivate func checkAuthorisationStatus() {
-        let locales = SFSpeechRecognizer.supportedLocales()
-        print(locales)
         SFSpeechRecognizer.requestAuthorization { (status:SFSpeechRecognizerAuthorizationStatus) in
             DispatchQueue.main.async {
                 switch status {
@@ -72,10 +75,54 @@ class NLPDemoViewController: UIViewController, SFSpeechRecognizerDelegate {
         self.view.addSubview(recordButton)
     }
     
+    fileprivate func addPickerView() {
+        localeTextField = UITextField(frame: CGRect(x: UIConstants.SCREEN_WIDTH/2 - 100, y: UIConstants.SCREEN_HEIGHT - 50, width: 200, height: 30))
+        localeTextField.borderStyle = .roundedRect
+        localeTextField.layer.borderColor = UIColor.black.cgColor
+        localeTextField.layer.borderWidth = 2
+        let localePicker = UIPickerView()
+        localePicker.delegate = self
+        localePicker.dataSource = self
+        localeTextField.inputView = localePicker
+        self.view.addSubview(localeTextField)
+    }
+    
+    fileprivate func addToolbar(){
+        let toolBar = UIToolbar()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(dismissKeyboard))
+        toolBar.sizeToFit()
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        localeTextField.inputAccessoryView = toolBar
+    }
+    
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
 }
 
 //MARK: SFSpeechRecoginizerDelegate
-extension NLPDemoViewController {
+extension NLPDemoViewController:SFSpeechRecognizerDelegate {
     
+}
+
+//MARK: UIPickerViewDelegate, UIPickerViewDataSource
+extension NLPDemoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return supportLocales.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return supportLocales[row].identifier
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedLocale = supportLocales[row]
+        localeTextField.text = selectedLocale?.identifier
+    }
 }
 
