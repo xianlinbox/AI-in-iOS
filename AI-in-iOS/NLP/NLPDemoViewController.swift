@@ -13,10 +13,9 @@ class NLPDemoViewController: UIViewController {
     var recordButton:UIButton!
     var localeTextField:UITextField!
     let supportLocales = Array(SFSpeechRecognizer.supportedLocales())
-    var selectedLocale:Locale?
-    
+    var selectedLocale:Locale = Locale(identifier: "en_US")
     lazy var speechRecoginizer:SFSpeechRecognizer? = {
-        if let recoginiser = SFSpeechRecognizer(locale: Locale(identifier: "en_US")){
+        if let recoginiser = SFSpeechRecognizer(locale: selectedLocale){
             recoginiser.delegate = self
             return recoginiser
         } else {
@@ -122,7 +121,7 @@ extension NLPDemoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedLocale = supportLocales[row]
-        localeTextField.text = selectedLocale?.identifier
+        localeTextField.text = selectedLocale.identifier
     }
 }
 
