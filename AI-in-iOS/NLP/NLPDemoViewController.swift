@@ -8,12 +8,15 @@
 
 import UIKit
 import Speech
+import AVKit
 class NLPDemoViewController: UIViewController {
     var textView:UITextView!
     var recordButton:UIButton!
     var localeTextField:UITextField!
     let supportLocales = Array(SFSpeechRecognizer.supportedLocales())
     var selectedLocale:Locale = Locale(identifier: "en_US")
+    let audioEngine = AVAudioEngine()
+    var speechRecognitionTask:SFSpeechRecognitionTask?
     lazy var speechRecoginizer:SFSpeechRecognizer? = {
         if let recoginiser = SFSpeechRecognizer(locale: selectedLocale){
             recoginiser.delegate = self
@@ -32,8 +35,38 @@ class NLPDemoViewController: UIViewController {
         checkAuthorisationStatus()
     }
     
-    @objc func recordButtonTapped(){
+    @objc func recordButtonTapped() throws {
         print("record button tapped .........")
+        if let recognitionTask = self.speechRecognitionTask {
+            recognitionTask.cancel()
+            self.speechRecognitionTask = nil
+        }
+        let request = SFSpeechAudioBufferRecognitionRequest()
+        let node = audioEngine.inputNode
+        request.shouldReportPartialResults = true
+        speechRecognitionTask = speechRecoginizer?.recognitionTask(with: request) { (result, error) in
+            var isFinal = false
+            if let result = result {
+                let sentence = result.bestTranscription.formattedString
+                self.textView.text = sentence
+                isFinal = result.isFinal
+            }
+            
+            if error != nil || isFinal {
+                self.audioEngine.stop()
+                node.removeTap(onBus: 0)
+                self.speechRecognitionTask = nil
+                self.recordButton.isEnabled = true
+                self.recordButton.setTitle("Start Recording", for: [])
+            }
+        }
+        let recordingFormat = node.outputFormat(forBus: 0)
+        node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, time) in
+            request.append(buffer)
+        }
+        audioEngine.prepare()
+        try audioEngine.start()
+        textView.text = "(Go Ahead, I'm listening...)"
     }
     
     fileprivate func checkAuthorisationStatus() {
