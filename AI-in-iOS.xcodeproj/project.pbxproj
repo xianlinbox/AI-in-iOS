@@ -135,6 +135,7 @@
 		DF1602B7203CAEF80052216D /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				DFAFCAF92031FE5000556F68 /* ImageAnalysisBaseViewController.swift */,
 				DF1602B5203CAEED0052216D /* ViewUtils.swift */,
 			);
 			path = Share;
@@ -224,7 +225,6 @@
 				DFB489212028F402003FE79B /* VisionUtils.swift */,
 				DFEE3E262028054400A17295 /* FaceRecognisationDemoViewController.swift */,
 				DF78007A202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift */,
-				DFAFCAF92031FE5000556F68 /* ImageAnalysisBaseViewController.swift */,
 				DFAFCAFB2032006A00556F68 /* BarcodeReadingViewController.swift */,
 				DFF730B42033428B00C9B44F /* ClassificationViewController.swift */,
 				DF7B158C2039314A006D0018 /* RealtimeAddonViewController.swift */,
