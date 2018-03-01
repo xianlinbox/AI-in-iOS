@@ -31,6 +31,9 @@
 		DFAFCB00203212CC00556F68 /* VisionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB489212028F402003FE79B /* VisionUtils.swift */; };
 		DFAFCB0120321FB300556F68 /* VisionDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE3E232027695500A17295 /* VisionDemosViewController.swift */; };
 		DFB489222028F402003FE79B /* VisionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB489212028F402003FE79B /* VisionUtils.swift */; };
+		DFC7C11020489B31009F1E78 /* OCRUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC7C10F20489B31009F1E78 /* OCRUtils.swift */; };
+		DFC7C11320489CA1009F1E78 /* OCRUtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC7C11220489CA1009F1E78 /* OCRUtilsTest.swift */; };
+		DFC7C11420489F30009F1E78 /* OCRUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC7C10F20489B31009F1E78 /* OCRUtils.swift */; };
 		DFDF749B2032342A00FC8163 /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFDF749A2032342A00FC8163 /* TestAssets.xcassets */; };
 		DFE3074D2032330300A604FC /* VisionUtilsSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3074C2032330300A604FC /* VisionUtilsSpecs.swift */; };
 		DFEE3E242027695500A17295 /* VisionDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE3E232027695500A17295 /* VisionDemosViewController.swift */; };
@@ -86,6 +89,8 @@
 		DFAFCAF92031FE5000556F68 /* ImageAnalysisBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnalysisBaseViewController.swift; sourceTree = "<group>"; };
 		DFAFCAFB2032006A00556F68 /* BarcodeReadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReadingViewController.swift; sourceTree = "<group>"; };
 		DFB489212028F402003FE79B /* VisionUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionUtils.swift; sourceTree = "<group>"; };
+		DFC7C10F20489B31009F1E78 /* OCRUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRUtils.swift; sourceTree = "<group>"; };
+		DFC7C11220489CA1009F1E78 /* OCRUtilsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRUtilsTest.swift; sourceTree = "<group>"; };
 		DFDF749A2032342A00FC8163 /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
 		DFE3074C2032330300A604FC /* VisionUtilsSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionUtilsSpecs.swift; sourceTree = "<group>"; };
 		DFEE3E232027695500A17295 /* VisionDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionDemosViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +229,7 @@
 		DFABB7492024CD770074C3E1 /* AI-in-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				DFC7C11120489C84009F1E78 /* OCR */,
 				DFA3E5492036372600891674 /* NLP */,
 				DFF730BD203347F400C9B44F /* CoreML */,
 				DFE3074B203232EA00A604FC /* Vision */,
@@ -232,6 +238,14 @@
 				DFDF749A2032342A00FC8163 /* TestAssets.xcassets */,
 			);
 			path = "AI-in-iOSTests";
+			sourceTree = "<group>";
+		};
+		DFC7C11120489C84009F1E78 /* OCR */ = {
+			isa = PBXGroup;
+			children = (
+				DFC7C11220489CA1009F1E78 /* OCRUtilsTest.swift */,
+			);
+			path = OCR;
 			sourceTree = "<group>";
 		};
 		DFE3074B203232EA00A604FC /* Vision */ = {
@@ -278,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				DFFDF0B4203F70C600B147C4 /* OCRDemoViewController.swift */,
+				DFC7C10F20489B31009F1E78 /* OCRUtils.swift */,
 			);
 			path = OCR;
 			sourceTree = "<group>";
@@ -505,6 +520,7 @@
 				DFF730C4203382BA00C9B44F /* SqueezeNet.mlmodel in Sources */,
 				DFA3E547203635B100891674 /* NLPUtils.swift in Sources */,
 				DFAFCAFA2031FE5000556F68 /* ImageAnalysisBaseViewController.swift in Sources */,
+				DFC7C11020489B31009F1E78 /* OCRUtils.swift in Sources */,
 				DFF730BB2033476C00C9B44F /* CoreMLUtils.swift in Sources */,
 				DFB489222028F402003FE79B /* VisionUtils.swift in Sources */,
 				DFEE3E242027695500A17295 /* VisionDemosViewController.swift in Sources */,
@@ -526,6 +542,8 @@
 			files = (
 				DFA3E548203635B100891674 /* NLPUtils.swift in Sources */,
 				DFA3E54E20363A5700891674 /* NLPUtilsSpecs.swift in Sources */,
+				DFC7C11420489F30009F1E78 /* OCRUtils.swift in Sources */,
+				DFC7C11320489CA1009F1E78 /* OCRUtilsTest.swift in Sources */,
 				DFABB74B2024CD770074C3E1 /* AI_in_iOSTests.swift in Sources */,
 				DFF730C5203382BA00C9B44F /* SqueezeNet.mlmodel in Sources */,
 				DFF730B9203346D700C9B44F /* MobileNet.mlmodel in Sources */,
