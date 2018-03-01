@@ -5,7 +5,7 @@ target 'AI-in-iOS' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'SwiftLint'
-  # Pods for AI-in-iOS
+  pod 'TesseractOCRiOS'
 
   target 'AI-in-iOSTests' do
     inherit! :search_paths
