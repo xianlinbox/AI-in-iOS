@@ -14,6 +14,9 @@
 		DF78007B202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78007A202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift */; };
 		DF78007D202D0FF500AB64AF /* ApplicationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78007C202D0FF500AB64AF /* ApplicationConstants.swift */; };
 		DF7B158D2039314A006D0018 /* RealtimeAddonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B158C2039314A006D0018 /* RealtimeAddonViewController.swift */; };
+		DF8254B320479DF800F0BB14 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8254B220479DF800F0BB14 /* libz.tbd */; };
+		DF8254B92047A07D00F0BB14 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8254BA2047A07D00F0BB14 /* TesseractOCR.framework */; };
+		DF8254BC2047A07E00F0BB14 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8254BB2047A07E00F0BB14 /* CoreImage.framework */; };
 		DFA3E547203635B100891674 /* NLPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA3E546203635B100891674 /* NLPUtils.swift */; };
 		DFA3E548203635B100891674 /* NLPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA3E546203635B100891674 /* NLPUtils.swift */; };
 		DFA3E54E20363A5700891674 /* NLPUtilsSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA3E54D20363A5700891674 /* NLPUtilsSpecs.swift */; };
@@ -63,6 +66,11 @@
 		DF78007A202CBD5000AB64AF /* FaceLandmarksDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLandmarksDemoViewController.swift; sourceTree = "<group>"; };
 		DF78007C202D0FF500AB64AF /* ApplicationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConstants.swift; sourceTree = "<group>"; };
 		DF7B158C2039314A006D0018 /* RealtimeAddonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeAddonViewController.swift; sourceTree = "<group>"; };
+		DF8254B220479DF800F0BB14 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		DF8254BA2047A07D00F0BB14 /* TesseractOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF8254BB2047A07E00F0BB14 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		DF8254BD2047A21000F0BB14 /* eng.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = eng.traineddata; sourceTree = "<group>"; };
+		DF8254BE2047A21200F0BB14 /* chi_sim.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = chi_sim.traineddata; sourceTree = "<group>"; };
 		DFA3E546203635B100891674 /* NLPUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPUtils.swift; sourceTree = "<group>"; };
 		DFA3E54D20363A5700891674 /* NLPUtilsSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPUtilsSpecs.swift; sourceTree = "<group>"; };
 		DFABB7322024CD770074C3E1 /* AI-in-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI-in-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +105,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF8254BC2047A07E00F0BB14 /* CoreImage.framework in Frameworks */,
+				DF8254B92047A07D00F0BB14 /* TesseractOCR.framework in Frameworks */,
+				DF8254B320479DF800F0BB14 /* libz.tbd in Frameworks */,
 				5359084F81E950CD463BFAC8 /* Pods_AI_in_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +137,9 @@
 		D57A8C241EF14FD623A79442 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF8254BB2047A07E00F0BB14 /* CoreImage.framework */,
+				DF8254BA2047A07D00F0BB14 /* TesseractOCR.framework */,
+				DF8254B220479DF800F0BB14 /* libz.tbd */,
 				FC983ABCB2A0737316CB9E45 /* Pods_AI_in_iOS.framework */,
 				D3C4704F546A22B07240255B /* Pods_AI_in_iOSTests.framework */,
 			);
@@ -148,6 +162,15 @@
 				DFA3E546203635B100891674 /* NLPUtils.swift */,
 			);
 			path = NLP;
+			sourceTree = "<group>";
+		};
+		DF8254B420479E6000F0BB14 /* tessdata */ = {
+			isa = PBXGroup;
+			children = (
+				DF8254BE2047A21200F0BB14 /* chi_sim.traineddata */,
+				DF8254BD2047A21000F0BB14 /* eng.traineddata */,
+			);
+			path = tessdata;
 			sourceTree = "<group>";
 		};
 		DFA3E5492036372600891674 /* NLP */ = {
@@ -181,6 +204,7 @@
 		DFABB7342024CD770074C3E1 /* AI-in-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				DF8254B420479E6000F0BB14 /* tessdata */,
 				DFFDF0B3203F705300B147C4 /* OCR */,
 				DF1E96952034C9DC006E6D83 /* NLP */,
 				DFF730B6203344E300C9B44F /* CoreML */,
@@ -658,6 +682,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TX44MTV4A5;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "AI-in-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xianlinbox.AI-in-iOS";
@@ -675,6 +700,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TX44MTV4A5;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "AI-in-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xianlinbox.AI-in-iOS";
