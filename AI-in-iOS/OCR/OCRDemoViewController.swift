@@ -19,7 +19,9 @@ class OCRDemoViewController: ImageAnalysisBaseViewController {
     }
     
     override func performAnalysis() {
-        
+        OCRUtils.recogText(image: self.imageView.image!) { (result) in
+            self.textView.text = result
+        }
     }
     
     private func addTextArea() {

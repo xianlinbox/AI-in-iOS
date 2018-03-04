@@ -18,6 +18,8 @@ struct OCRUtils {
             tesseract.image = image.g8_blackAndWhite()
             if tesseract.recognize() {
               completion(tesseract.recognizedText)
+            }else {
+                print("*******Unable to recog *********")
             }
         }
     }
