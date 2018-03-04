@@ -301,6 +301,7 @@
 				DFABB7302024CD770074C3E1 /* Resources */,
 				BACA22C592176A91CE433EC1 /* [CP] Embed Pods Frameworks */,
 				9262885D993D8016A1418476 /* [CP] Copy Pods Resources */,
+				DFCF2F94204C3AAE008E4A7C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -462,6 +463,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AI-in-iOS/Pods-AI-in-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DFCF2F94204C3AAE008E4A7C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		F4EB949886506CCD0D3DB6F9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
