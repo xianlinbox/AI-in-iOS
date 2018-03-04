@@ -27,7 +27,7 @@ class OCRUtilsSpecs: QuickSpec {
                 let image = UIImage(named: "english-txt", in: Bundle(for: OCRUtilsSpecs.self), compatibleWith: nil)
                 waitUntil(timeout: 2, action: { (done) in
                     OCRUtils.recogText(image: image!, { (result) in
-                        expect(result).to(equal("Sometimes"))
+                        expect(result.contains("Take It Easg. Make It Easy")).to(be(true))
                         done()
                     })
                 })
