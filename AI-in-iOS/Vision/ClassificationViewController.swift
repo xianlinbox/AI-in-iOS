@@ -10,23 +10,23 @@ import UIKit
 import Vision
 
 class ClassificationViewController: ImageAnalysisBaseViewController {
-    var textView:UITextView!
-    
+    var textView: UITextView!
+
     override func viewWillAppear(_ animated: Bool) {
-        addTextArea();
+        addTextArea()
     }
-    
+
     override func performAnalysis() {
         CoreMLUtils.detectImage(image: self.imageView.image!) { (results) in
-            var text = "";
+            var text = ""
             let top3 = results[0...2]
             for result in top3 {
-                text = text + String(format:"%.2f", result.confidence * 100) + "% : " + result.identifier + "\n"
+                text = text + String(format: "%.2f", result.confidence * 100) + "% : " + result.identifier + "\n"
             }
             self.textView.text = text
         }
     }
-    
+
     private func addTextArea() {
         self.textView?.removeFromSuperview()
         let imageViewFrame = self.imageView.frame

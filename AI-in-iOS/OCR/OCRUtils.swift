@@ -10,15 +10,15 @@ import Foundation
 import TesseractOCR
 
 struct OCRUtils {
-    static func recogText(image:UIImage,_ completion:(String) -> Void){
-    
+    static func recogText(image: UIImage, _ completion: (String) -> Void) {
+
         if let tesseract = G8Tesseract(language: "eng") {
             tesseract.engineMode = .tesseractCubeCombined
             tesseract.pageSegmentationMode = .auto
             tesseract.image = image.g8_blackAndWhite()
             if tesseract.recognize() {
               completion(tesseract.recognizedText)
-            }else {
+            } else {
                 print("*******Unable to recog *********")
             }
         }

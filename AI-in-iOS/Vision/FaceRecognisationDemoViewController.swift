@@ -8,16 +8,16 @@
 import UIKit
 
 class FaceRecognisationDemoViewController: ImageAnalysisBaseViewController {
-    
+
     override func performAnalysis() {
-        VisionUtils.detectImage(detectType:FACE_RECOG, image: self.imageView.image!) { (faceMarks) in
+        VisionUtils.detectImage(detectType: FACE_RECOG, image: self.imageView.image!) { (faceMarks) in
             for mark in faceMarks {
-                self.imageView.addSubview(self.createBoxView(frame: ViewUtils.scaleFrame(mark.cgRectValue,self.imageView!.frame)))
+                self.imageView.addSubview(self.createBoxView(frame: ViewUtils.scaleFrame(mark.cgRectValue, self.imageView!.frame)))
             }
         }
     }
 
-    private func createBoxView(frame:CGRect) -> UIView{
+    private func createBoxView(frame: CGRect) -> UIView {
         let boxView = UIView(frame: frame)
         boxView.backgroundColor = UIColor.clear
         boxView.layer.borderColor = UIColor.red.cgColor
@@ -25,4 +25,3 @@ class FaceRecognisationDemoViewController: ImageAnalysisBaseViewController {
         return boxView
     }
 }
-

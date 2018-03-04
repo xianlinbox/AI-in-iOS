@@ -8,22 +8,22 @@
 import UIKit
 
 class OCRDemoViewController: ImageAnalysisBaseViewController {
-    var textView:UITextView!
+    var textView: UITextView!
     override func viewDidLoad() {
-        super.viewDidLoad();
+        super.viewDidLoad()
         self.reloadImage(newImage: UIImage(named: "OCRText"))
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
-        addTextArea();
+        addTextArea()
     }
-    
+
     override func performAnalysis() {
         OCRUtils.recogText(image: self.imageView.image!) { (result) in
             self.textView.text = result
         }
     }
-    
+
     private func addTextArea() {
         self.textView?.removeFromSuperview()
         let imageViewFrame = self.imageView.frame

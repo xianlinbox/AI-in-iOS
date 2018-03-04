@@ -10,17 +10,17 @@ import UIKit
 import AVKit
 import Vision
 class RealtimeAddonViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-    var session:AVCaptureSession!
-    var previewLayer:AVCaptureVideoPreviewLayer!
-    
+    var session: AVCaptureSession!
+    var previewLayer: AVCaptureVideoPreviewLayer!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         getCameraAuthorisation()
     }
-    
+
     private func getCameraAuthorisation() {
         let vedioStatua = AVCaptureDevice.authorizationStatus(for: .video)
-        
+
         switch vedioStatua {
         case .denied,
              .restricted:
@@ -29,54 +29,54 @@ class RealtimeAddonViewController: UIViewController, AVCaptureVideoDataOutputSam
             initCapture()
         }
     }
-    
+
     private func showWarningMessage() {
         let alertView = UIAlertController(title: "Camera is not authorised", message: "Please go to settings > privacy -> Camera to open the priviledge", preferredStyle: .actionSheet)
         let defaultActipn = UIAlertAction(title: "OK", style: .default)
         alertView.addAction(defaultActipn)
         self.present(alertView, animated: true, completion: nil)
     }
-    
+
     private func initCapture() {
         session = AVCaptureSession()
         let device = AVCaptureDevice.default(for: .video)
-        do{
+        do {
             let deviceInput = try AVCaptureDeviceInput(device: device!)
             session.addInput(deviceInput)
         } catch {
             fatalError(error.localizedDescription)
         }
-        
+
         let deviceOutput = AVCaptureVideoDataOutput()
         deviceOutput.setSampleBufferDelegate(self, queue: DispatchQueue.main)
         session.addOutput(deviceOutput)
-        
+
         previewLayer = AVCaptureVideoPreviewLayer(session: session)
         self.view.layer.addSublayer(previewLayer)
         self.session.startRunning()
     }
 }
 
-//MARK: AVCaptureVideoDataOutputSampleBufferDelegate
+// MARK: AVCaptureVideoDataOutputSampleBufferDelegate
 extension RealtimeAddonViewController {
-    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection){
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         let cvPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
         let requestHandler = VNImageRequestHandler(cvPixelBuffer: cvPixelBuffer!, options: [:])
         let faceDetectReq = VNDetectFaceRectanglesRequest()
         do {
             try requestHandler.perform([faceDetectReq])
-        }catch{
+        } catch {
             fatalError(error.localizedDescription)
         }
-        
+
         if let results = faceDetectReq.results as? [VNFaceObservation] {
             DispatchQueue.main.async {
                 self.handleFaceDetectResults(results)
             }
         }
     }
-    
-    private func handleFaceDetectResults(_ result:[VNFaceObservation]) {
+
+    private func handleFaceDetectResults(_ result: [VNFaceObservation]) {
         ViewUtils.clearOldSubViews(view: self.view)
         for observation in result {
             let ratioRect = observation.boundingBox
@@ -89,4 +89,3 @@ extension RealtimeAddonViewController {
         }
     }
 }
-

@@ -8,18 +8,18 @@
 import Foundation
 
 struct NLPUtils {
-    static func tagSentence(sentence:String, _ completion:([String]) -> Void) {
+    static func tagSentence(sentence: String, _ completion: ([String]) -> Void) {
         let tagSchemes = NSLinguisticTagger.availableTagSchemes(forLanguage: "en")
-        let options:NSLinguisticTagger.Options = [NSLinguisticTagger.Options.joinNames, NSLinguisticTagger.Options.omitWhitespace]
+        let options: NSLinguisticTagger.Options = [NSLinguisticTagger.Options.joinNames, NSLinguisticTagger.Options.omitWhitespace]
         let linguisticTagger = NSLinguisticTagger(tagSchemes: tagSchemes, options: Int(options.rawValue))
         linguisticTagger.string = sentence
-        var result:[String] = []
+        var result: [String] = []
         linguisticTagger.enumerateTags(in: NSMakeRange(0, (sentence as NSString).length), scheme: NSLinguisticTagScheme.nameTypeOrLexicalClass, options: options) { (tag, tokenRange, _, _) in
             let token = (sentence as NSString).substring(with: tokenRange)
-            let tagName:String = tag?.rawValue ?? "unknown"
+            let tagName: String = tag?.rawValue ?? "unknown"
             result.append("\(token) -> \(tagName)")
         }
-        
+
         completion(result)
     }
 }

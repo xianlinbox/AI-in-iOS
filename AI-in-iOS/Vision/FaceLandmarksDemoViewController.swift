@@ -9,12 +9,10 @@ import UIKit
 import Vision
 
 class FaceLandmarksDemoViewController: ImageAnalysisBaseViewController {
- 
+
     override func performAnalysis() {
         VisionUtils.detectImage(detectType: FACE_LANDMARKS, image: self.imageView.image!, completion: { ( result ) in
-            
+
         })
     }
 }
-
-
