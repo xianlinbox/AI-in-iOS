@@ -11,7 +11,7 @@ import Vision
 class FaceLandmarksDemoViewController: ImageAnalysisBaseViewController {
 
     override func performAnalysis() {
-        VisionUtils.detectImage(detectType: FACE_LANDMARKS, image: self.imageView.image!, completion: { ( result ) in
+        VisionUtils.detectImage(detectType: VisionConstants.faceLandmarks, image: self.imageView.image!, completion: { ( result ) in
 
         })
     }

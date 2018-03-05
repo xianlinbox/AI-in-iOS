@@ -27,7 +27,10 @@ class OCRDemoViewController: ImageAnalysisBaseViewController {
     private func addTextArea() {
         self.textView?.removeFromSuperview()
         let imageViewFrame = self.imageView.frame
-        textView = UITextView(frame: CGRect(x: imageViewFrame.origin.x + 10, y: imageViewFrame.origin.y + imageViewFrame.size.height + 10, width: imageViewFrame.size.width-20, height: 200))
+        textView = UITextView(frame: CGRect(x: imageViewFrame.origin.x + 10,
+                                            y: imageViewFrame.origin.y + imageViewFrame.size.height + 10,
+                                            width: imageViewFrame.size.width-20,
+                                            height: 200))
         textView.textColor = UIColor.red
         textView.layer.borderColor = UIColor.black.cgColor
         textView.layer.borderWidth = 1

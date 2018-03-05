@@ -31,7 +31,9 @@ class RealtimeAddonViewController: UIViewController, AVCaptureVideoDataOutputSam
     }
 
     private func showWarningMessage() {
-        let alertView = UIAlertController(title: "Camera is not authorised", message: "Please go to settings > privacy -> Camera to open the priviledge", preferredStyle: .actionSheet)
+        let alertView = UIAlertController(title: "Camera is not authorised",
+                                          message: "Please go to settings > privacy -> Camera to open the priviledge",
+                                          preferredStyle: .actionSheet)
         let defaultActipn = UIAlertAction(title: "OK", style: .default)
         alertView.addAction(defaultActipn)
         self.present(alertView, animated: true, completion: nil)

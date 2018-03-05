@@ -60,7 +60,7 @@ class NLPDemoViewController: UIViewController {
             }
         }
         let recordingFormat = node.outputFormat(forBus: 0)
-        node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, time) in
+        node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, _) in
             request.append(buffer)
         }
         audioEngine.prepare()
@@ -91,7 +91,7 @@ class NLPDemoViewController: UIViewController {
 
     fileprivate func addTextArea() {
         self.textView?.removeFromSuperview()
-        textView = UITextView(frame: CGRect(x: 10, y: 100, width: UIConstants.SCREEN_WIDTH - 20, height: 600))
+        textView = UITextView(frame: CGRect(x: 10, y: 100, width: UIConstants.screenWidth - 20, height: 600))
         textView.textColor = UIColor.red
         textView.layer.borderColor = UIColor.black.cgColor
         textView.layer.borderWidth = 1
@@ -99,7 +99,7 @@ class NLPDemoViewController: UIViewController {
     }
 
     fileprivate func addRecordButton() {
-        recordButton = UIButton(frame: CGRect(x: UIConstants.SCREEN_WIDTH/2 - 100, y: UIConstants.SCREEN_HEIGHT - 100, width: 200, height: 30))
+        recordButton = UIButton(frame: CGRect(x: UIConstants.screenWidth/2 - 100, y: UIConstants.screenHeight - 100, width: 200, height: 30))
         recordButton.setTitle("Start voice recording", for: .normal)
         recordButton.backgroundColor=UIColor.blue
         recordButton.addTarget(self, action: #selector(recordButtonTapped), for: .touchUpInside)
@@ -107,7 +107,7 @@ class NLPDemoViewController: UIViewController {
     }
 
     fileprivate func addPickerView() {
-        localeTextField = UITextField(frame: CGRect(x: UIConstants.SCREEN_WIDTH/2 - 100, y: UIConstants.SCREEN_HEIGHT - 50, width: 200, height: 30))
+        localeTextField = UITextField(frame: CGRect(x: UIConstants.screenWidth/2 - 100, y: UIConstants.screenHeight - 50, width: 200, height: 30))
         localeTextField.borderStyle = .roundedRect
         localeTextField.layer.borderColor = UIColor.black.cgColor
         localeTextField.layer.borderWidth = 2

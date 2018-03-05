@@ -14,7 +14,7 @@ struct CoreMLUtils {
 
         guard let model = try? VNCoreMLModel(for: SqueezeNet().model) else { fatalError("This model can't be applied to CoreML") }
 
-        let imageDetectRequest = VNCoreMLRequest(model: model) { request, error in
+        let imageDetectRequest = VNCoreMLRequest(model: model) { request, _ in
             guard let results = request.results as? [VNClassificationObservation] else { fatalError("unexpected result type from VNCoreMLRequest") }
             completion(results)
         }

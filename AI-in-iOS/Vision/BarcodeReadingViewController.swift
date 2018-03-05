@@ -29,7 +29,10 @@ class BarcodeAnaylysisViewController: ImageAnalysisBaseViewController {
     private func addTextArea() {
         self.textView?.removeFromSuperview()
         let imageViewFrame = self.imageView.frame
-        textView = UITextView(frame: CGRect(x: imageViewFrame.origin.x + 10, y: imageViewFrame.origin.y + imageViewFrame.size.height + 20, width: imageViewFrame.size.width-20, height: 100))
+        textView = UITextView(frame: CGRect(x: imageViewFrame.origin.x + 10,
+                                            y: imageViewFrame.origin.y + imageViewFrame.size.height + 20,
+                                            width: imageViewFrame.size.width-20,
+                                            height: 100))
         textView.textColor = UIColor.red
         textView.layer.borderColor = UIColor.black.cgColor
         textView.layer.borderWidth = 1

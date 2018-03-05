@@ -39,6 +39,7 @@
 		DFE3074D2032330300A604FC /* VisionUtilsSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3074C2032330300A604FC /* VisionUtilsSpecs.swift */; };
 		DFEE3E242027695500A17295 /* VisionDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE3E232027695500A17295 /* VisionDemosViewController.swift */; };
 		DFEE3E272028054400A17295 /* FaceRecognisationDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE3E262028054400A17295 /* FaceRecognisationDemoViewController.swift */; };
+		DFF0414F204D810800DEC0BB /* VisionConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF0414E204D810800DEC0BB /* VisionConstants.swift */; };
 		DFF730B52033428B00C9B44F /* ClassificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF730B42033428B00C9B44F /* ClassificationViewController.swift */; };
 		DFF730B8203346D700C9B44F /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFF730B7203346D700C9B44F /* MobileNet.mlmodel */; };
 		DFF730B9203346D700C9B44F /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFF730B7203346D700C9B44F /* MobileNet.mlmodel */; };
@@ -95,6 +96,7 @@
 		DFE3074C2032330300A604FC /* VisionUtilsSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionUtilsSpecs.swift; sourceTree = "<group>"; };
 		DFEE3E232027695500A17295 /* VisionDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionDemosViewController.swift; sourceTree = "<group>"; };
 		DFEE3E262028054400A17295 /* FaceRecognisationDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognisationDemoViewController.swift; sourceTree = "<group>"; };
+		DFF0414E204D810800DEC0BB /* VisionConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionConstants.swift; sourceTree = "<group>"; };
 		DFF730B42033428B00C9B44F /* ClassificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationViewController.swift; sourceTree = "<group>"; };
 		DFF730B7203346D700C9B44F /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		DFF730BA2033476C00C9B44F /* CoreMLUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLUtils.swift; sourceTree = "<group>"; };
@@ -207,12 +209,12 @@
 				DFEE3E252028051100A17295 /* Vision */,
 				DF1602B7203CAEF80052216D /* Share */,
 				DFABB7352024CD770074C3E1 /* AppDelegate.swift */,
+				DF78007C202D0FF500AB64AF /* ApplicationConstants.swift */,
 				DFABB7372024CD770074C3E1 /* HomeViewController.swift */,
 				DFABB7392024CD770074C3E1 /* Main.storyboard */,
 				DFABB73C2024CD770074C3E1 /* Assets.xcassets */,
 				DFABB73E2024CD770074C3E1 /* LaunchScreen.storyboard */,
 				DFABB7412024CD770074C3E1 /* Info.plist */,
-				DF78007C202D0FF500AB64AF /* ApplicationConstants.swift */,
 			);
 			path = "AI-in-iOS";
 			sourceTree = "<group>";
@@ -257,6 +259,7 @@
 				DFAFCAFB2032006A00556F68 /* BarcodeReadingViewController.swift */,
 				DFF730B42033428B00C9B44F /* ClassificationViewController.swift */,
 				DF7B158C2039314A006D0018 /* RealtimeAddonViewController.swift */,
+				DFF0414E204D810800DEC0BB /* VisionConstants.swift */,
 			);
 			path = Vision;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				DFEE3E272028054400A17295 /* FaceRecognisationDemoViewController.swift in Sources */,
 				DFF730C4203382BA00C9B44F /* SqueezeNet.mlmodel in Sources */,
 				DFA3E547203635B100891674 /* NLPUtils.swift in Sources */,
+				DFF0414F204D810800DEC0BB /* VisionConstants.swift in Sources */,
 				DFAFCAFA2031FE5000556F68 /* ImageAnalysisBaseViewController.swift in Sources */,
 				DFC7C11020489B31009F1E78 /* OCRUtils.swift in Sources */,
 				DFF730BB2033476C00C9B44F /* CoreMLUtils.swift in Sources */,

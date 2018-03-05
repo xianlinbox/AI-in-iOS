@@ -20,7 +20,7 @@ class ImageAnalysisBaseViewController: UIViewController, UIImagePickerController
 
     func addButtons() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Camera", style: .plain, target: self, action: #selector(shootPhotoByCamera))
-        let changeButton = UIButton(frame: CGRect(x: UIConstants.SCREEN_WIDTH/2 - 100, y: UIConstants.SCREEN_HEIGHT - 100, width: 200, height: 30))
+        let changeButton = UIButton(frame: CGRect(x: UIConstants.screenWidth/2 - 100, y: UIConstants.screenHeight - 100, width: 200, height: 30))
         changeButton.setTitle("Choose Another Image", for: .normal)
         changeButton.backgroundColor=UIColor.blue
         changeButton.addTarget(self, action: #selector(pickImageFromLib), for: .touchUpInside)
@@ -51,7 +51,7 @@ class ImageAnalysisBaseViewController: UIViewController, UIImagePickerController
     }
 
     @objc func shootPhotoByCamera() {
-        if(UIImagePickerController.isSourceTypeAvailable(.camera)) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.allowsEditing = false
             imagePicker.sourceType = .camera
             imagePicker.cameraCaptureMode = .photo
@@ -84,9 +84,10 @@ class ImageAnalysisBaseViewController: UIViewController, UIImagePickerController
 extension ImageAnalysisBaseViewController {
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
-        let newImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+      if let newImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
         self.reloadImage(newImage: newImage)
         dismiss(animated: true, completion: nil)
+      }
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

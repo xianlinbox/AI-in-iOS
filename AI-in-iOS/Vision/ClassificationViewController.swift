@@ -21,7 +21,7 @@ class ClassificationViewController: ImageAnalysisBaseViewController {
             var text = ""
             let top3 = results[0...2]
             for result in top3 {
-                text = text + String(format: "%.2f", result.confidence * 100) + "% : " + result.identifier + "\n"
+                text += String(format: "%.2f", result.confidence * 100) + "% : " + result.identifier + "\n"
             }
             self.textView.text = text
         }
@@ -30,7 +30,10 @@ class ClassificationViewController: ImageAnalysisBaseViewController {
     private func addTextArea() {
         self.textView?.removeFromSuperview()
         let imageViewFrame = self.imageView.frame
-        textView = UITextView(frame: CGRect(x: imageViewFrame.origin.x + 10, y: imageViewFrame.origin.y + imageViewFrame.size.height + 20, width: imageViewFrame.size.width-20, height: 100))
+        textView = UITextView(frame: CGRect(x: imageViewFrame.origin.x + 10,
+                                            y: imageViewFrame.origin.y + imageViewFrame.size.height + 20,
+                                            width: imageViewFrame.size.width-20,
+                                            height: 100))
         textView.textColor = UIColor.red
         textView.layer.borderColor = UIColor.black.cgColor
         textView.layer.borderWidth = 1

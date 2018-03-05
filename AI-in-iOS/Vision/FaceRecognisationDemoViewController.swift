@@ -10,7 +10,7 @@ import UIKit
 class FaceRecognisationDemoViewController: ImageAnalysisBaseViewController {
 
     override func performAnalysis() {
-        VisionUtils.detectImage(detectType: FACE_RECOG, image: self.imageView.image!) { (faceMarks) in
+        VisionUtils.detectImage(detectType: VisionConstants.faceRecog, image: self.imageView.image!) { (faceMarks) in
             for mark in faceMarks {
                 self.imageView.addSubview(self.createBoxView(frame: ViewUtils.scaleFrame(mark.cgRectValue, self.imageView!.frame)))
             }
