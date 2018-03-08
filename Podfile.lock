@@ -1,21 +1,24 @@
 PODS:
   - Nimble (7.0.3)
   - Quick (1.2.0)
+  - SnapKit (4.0.0)
   - SwiftLint (0.24.2)
   - TesseractOCRiOS (4.0.0)
 
 DEPENDENCIES:
   - Nimble
   - Quick
+  - SnapKit
   - SwiftLint
   - TesseractOCRiOS
 
 SPEC CHECKSUMS:
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftLint: 2aa21b96c8d13396a051bc1cb659d2ce1e0075b0
   TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
 
-PODFILE CHECKSUM: 9f57f9a47070ee3007cce206e65bfeb67fb4ede3
+PODFILE CHECKSUM: 00bedc61e215afcfdf3aeccb21fe57b6c277f452
 
 COCOAPODS: 1.4.0

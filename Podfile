@@ -6,6 +6,7 @@ target 'AI-in-iOS' do
   use_frameworks!
   pod 'SwiftLint'
   pod 'TesseractOCRiOS'
+  pod 'SnapKit'
 
   target 'AI-in-iOSTests' do
     inherit! :search_paths
