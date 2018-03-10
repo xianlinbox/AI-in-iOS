@@ -25,11 +25,13 @@ class OCRDemoViewController: ImageAnalysisBaseViewController {
   private func addTextArea() {
     self.textView?.removeFromSuperview()
     textView = UITextView()
+    textView.layer.borderColor = UIColor.red.cgColor
+    textView.layer.borderWidth = 2
     self.view.addSubview(textView)
     textView.snp.makeConstraints { (constraints) in
       constraints.width.equalTo(self.imageView)
       constraints.left.right.equalTo(self.imageView)
-      constraints.top.equalTo(self.imageView.snp.bottom).offset(10)
+      constraints.top.equalTo(self.imageView.snp.bottom).offset(20)
       constraints.height.equalTo(200)
     }
   }
