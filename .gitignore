@@ -59,5 +59,6 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 
-
+#credentialInfo
+AI-in-iOS/GoogleService-Info.plist
 # End of https://www.gitignore.io/api/swift
