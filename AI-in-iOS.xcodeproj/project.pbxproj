@@ -303,7 +303,6 @@
 				DFABB72F2024CD770074C3E1 /* Frameworks */,
 				DFABB7302024CD770074C3E1 /* Resources */,
 				BACA22C592176A91CE433EC1 /* [CP] Embed Pods Frameworks */,
-				9262885D993D8016A1418476 /* [CP] Copy Pods Resources */,
 				DFCF2F94204C3AAE008E4A7C /* ShellScript */,
 			);
 			buildRules = (
@@ -324,7 +323,6 @@
 				DFABB7432024CD770074C3E1 /* Frameworks */,
 				DFABB7442024CD770074C3E1 /* Resources */,
 				81C2A930E33217D569E5AA11 /* [CP] Embed Pods Frameworks */,
-				34FA6EAF9F9B5ACBACAE42B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,21 +397,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		34FA6EAF9F9B5ACBACAE42B1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AI-in-iOSTests/Pods-AI-in-iOSTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		81C2A930E33217D569E5AA11 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,21 +417,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AI-in-iOSTests/Pods-AI-in-iOSTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9262885D993D8016A1418476 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AI-in-iOS/Pods-AI-in-iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BACA22C592176A91CE433EC1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -456,13 +424,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AI-in-iOS/Pods-AI-in-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/TesseractOCRiOS/TesseractOCR.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TesseractOCR.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

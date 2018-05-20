@@ -7,6 +7,9 @@ target 'AI-in-iOS' do
   pod 'SwiftLint'
   pod 'TesseractOCRiOS'
   pod 'SnapKit'
+  pod 'Firebase/Core'
+  pod 'Firebase/MLVision'
+  pod 'Firebase/MLVisionLabelModel'
 
   target 'AI-in-iOSTests' do
     inherit! :search_paths
